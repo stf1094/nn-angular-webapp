@@ -1,0 +1,1108 @@
+    <div class="container-fluid mt-2">
+                <div class="animated fadeIn">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa fa-group"></i> Your Contacts
+                            <div class="card-actions">
+                                <a href="http://l-lin.github.io/angular-datatables/#/gettingStarted">
+                                    <small class="text-muted">docs</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <div class="ml-1 my-1">
+                                <div class="row">
+                                <div class="col-sm-3">
+                                    <p>Select All<p>
+                                  <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                </label>
+                                </div>
+                              
+                                 <div class="form-group col-sm-7">
+                                    
+                                                <select id="select" name="select" class="form-control" size="1">
+                                                    <option value="0">Select an Action</option>
+                                                    <option value="1">Add to Project</option>
+                                                    <option value="2">Add Tag</option>
+                                                    <option value="3">Send Message</option>
+                                                    <option value="3">Delete Contacts</option>
+                                                </select>
+                                            
+                                        </div>
+                                    <div class="col-sm-2">
+                                         <a class="btn btn-success" href="profile.html">
+                                                Submit
+                                            </a>
+                                    </div>
+                                    </div>
+                            </div>
+                                   
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <table class="table table-striped table-bordered datatable">
+                                <thead>
+                                    <tr>
+                                        <th>Select</th>
+                                        <th>Name</th>
+                                        <th>Contact Info</th>
+                                        <th>Tags</th>
+                                        <th>Projects</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" ununchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Christian Medaglia</td>
+                                        <td>
+                                            <span><i class="fa fa-envelope"></i> email@email.com</span><br>
+                                            <span><i class="fa fa-envelope"></i> email2@email.com</span> <br>
+                                            <span><i class="fa fa-home"></i> 123-333-3333 </span> <br> 
+                                            <span><i class="fa fa-mobile"></i> 555-555-5555</span> <br>
+                                            <span><i class="fa fa-phone"></i> 508-867-5309</span>
+                                        </td>
+                                        <td>
+                                            <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">NASCAR</span>
+                                            <span class="badge badge-warning">Movies</span>
+                                        </td>
+                                        <td>
+                                            <a href="#addToProject" data-toggle="modal"><span class="badge badge-success"><i class="icon-plus"></i></span></a>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="profile.html">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="new-message.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" data-toggle="modal" href="#deleteContact">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Alphonse Ivo</td>
+                                        <td>
+                                            <span>email@email.com</span><br>
+                                            <span>123-654-0000</span>
+                                        </td>
+                                        <td>
+                                          <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">Biz Dev</span>
+                                            <span class="badge badge-warning">Movies</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Project 1</span>
+                                            <a href="#addToProject" data-toggle="modal"><span class="badge badge-success"><i class="icon-plus"></i></span></a>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="profile.html">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="new-message.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" data-toggle="modal" href="#deleteContact">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Thancmar Theophanes</td>
+                                        <td>
+                                            <span>email@email.com</span><br>
+                                            <span>123-654-0000</span>
+                                        </td>
+                                        <td>
+                                         <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">NASCAR</span>
+                                            <span class="badge badge-warning">Biz Dev</span>
+                                            <span class="badge badge-warning">Movies</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Project 1</span>
+                                            <span class="badge badge-success"><i class="icon-plus"></i></span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="profile.html">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="new-message.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Walerian Khwaja</td>
+                                        <td>
+                                            <span>email@email.com</span><br>
+                                            <span>123-654-0000</span>
+                                        </td>
+                                        <td>
+                                         <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">NASCAR</span>
+                                            <span class="badge badge-warning">Biz Dev</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Project 1</span>
+                                            <span class="badge badge-success"><i class="icon-plus"></i></span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="profile.html">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="new-message.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Clemens Janko</td>
+                                        <td>
+                                            <span>email@email.com</span><br>
+                                            <span>123-654-0000</span>
+                                        </td>
+                                        <td> 
+                                            <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">Biz Dev</span>
+                                            <span class="badge badge-warning">Movies</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Project 3</span>
+                                            <span class="badge badge-success"><i class="icon-plus"></i></span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="profile.html">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="new-message.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Chidubem Gottlob</td>
+                                        <td>
+                                            <span>email@email.com</span><br>
+                                            <span>123-654-0000</span>
+                                        </td>
+                                        <td>
+                                         <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">NASCAR</span>
+                                            <span class="badge badge-warning">Biz Dev</span>
+                                            <span class="badge badge-warning">Movies</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Project 3</span>
+                                            <span class="badge badge-success"><i class="icon-plus"></i></span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="profile.html">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="new-message.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Hristofor Sergio</td>
+                                        <td>email@email.com</td>
+                                        
+                                        <td> 
+                                            <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">NASCAR</span>
+                                            <span class="badge badge-warning">Biz Dev</span>
+                                            <span class="badge badge-warning">Movies</span>
+                                        </td>
+                                        
+                                        <td>
+                                            <span class="badge badge-success">Project 2</span>
+                                            <span class="badge badge-success"><i class="icon-plus"></i></span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="profile.html">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="new-message.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Tadhg Griogair</td>
+                                        <td>
+                                            <span>email@email.com</span><br>
+                                            <span>123-654-0000</span>
+                                        </td>
+                                        <td> 
+                                            <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">NASCAR</span>
+                                            <span class="badge badge-warning">Biz Dev</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Project 2</span>
+                                            <span class="badge badge-success"><i class="icon-plus"></i></span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="profile.html">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="UIkits-email-compose.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Pollux Beaumont</td>
+                                        <td>
+                                            <span>email@email.com</span><br>
+                                            <span>123-654-0000</span>
+                                        </td>
+                                         <td> 
+                                            <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">Biz Dev</span>
+                                            <span class="badge badge-warning">Movies</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Project 1</span>
+                                            <span class="badge badge-success"><i class="icon-plus"></i></span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="UIkits-email-compose.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Adam Alister</td>
+                                        <td>
+                                            <span>email@email.com</span><br>
+                                            <span>123-654-0000</span>
+                                        </td>
+                                         <td> 
+                                            <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">NASCAR</span>
+                                            <span class="badge badge-warning">Biz Dev</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">Project 2</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="UIkits-email-compose.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Carlito Roffe</td>
+                                        <td>email@email.com</td>
+                                         <td> 
+                                            <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">NASCAR</span>
+                                            <span class="badge badge-warning">Movies</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-danger">Banned</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="UIkits-email-compose.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Sana Amrin</td>
+                                        <td>email@email.com</td>
+                                         <td> 
+                                            <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-danger">Banned</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="UIkits-email-compose.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Adinah Ralph</td>
+                                        <td>email@email.com</td>
+                                         <td> 
+                                            <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">Inactive</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="UIkits-email-compose.html">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Dederick Mihail</td>
+                                        <td>email@email.com</td>
+                                         <td> 
+                                            <a href="#addTag" data-toggle="modal"><span class="badge badge-warning"><i class="icon-plus"></i></span></a>
+                                            <span class="badge badge-warning">NASCAR</span>
+                                            <span class="badge badge-warning">Biz Dev</span>
+                                            <span class="badge badge-warning">Movies</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-default">Inactive</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Hipólito András</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Fricis Arieh</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Scottie Maximilian</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Bao Gaspar</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-success">Active</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Tullio Luka</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-danger">Banned</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Felice Arseniy</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-default">Inactive</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Finlay Alf</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-default">Inactive</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="no">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Theophilus Nala</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Sullivan Robert</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Kristóf Filiberto</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-success">Active</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Kuzma Edvard</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-success">Active</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Bünyamin Kasper</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-danger">Banned</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Crofton Arran</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-danger">Banned</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Bernhard Shelah</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-default">Inactive</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Grahame Miodrag</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Innokentiy Celio</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Kostandin Warinhari</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                         <td> 
+                                            <label class="switch switch-icon switch-pill switch-primary">
+                                                <input type="checkbox" class="switch-input" unchecked="">
+                                                <span class="switch-label" data-on="" data-off=""></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>Ajith Hristijan</td>
+                                        <td>email@email.com</td>
+                                        <td>123-456-789</td>
+                                        <td>
+                                            <span class="badge badge-warning">Pending</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" href="#">
+                                                <i class="fa fa-search-plus "></i>
+                                            </a>
+                                              <a class="btn btn-info" href="#">
+                                                <i class="icon-camrecorder"></i>
+                                            </a>
+                                            <a class="btn btn-success" href="#">
+                                                <i class="fa fa-edit "></i>
+                                            </a>
+                                            <a class="btn btn-danger" href="#">
+                                                <i class="fa fa-trash-o "></i>
+
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>

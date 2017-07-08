@@ -1,169 +1,8 @@
-     <div class="modal fade" id="addContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Add Contact</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                            <div class="col-sm-12">
-
-                            <div class="card">
-                              
-                                <div class="card-block">
-                                   <div class="row">
-                                        <div class="col-sm-6">
-                                          <div class="form-group">
-                                                <label for="name">First Name</label>
-                                                <input type="text" class="form-control" id="name" placeholder="Enter first name">
-                                            </div>
-                                       </div>
-                                        <div class="col-sm-6">
-                                        <div class="form-group">
-                                                <label for="name">Last Name</label>
-                                                <input type="text" class="form-control" id="name" placeholder="Enter last name">
-                                            </div>
-                                       </div>
-                                    </div>
-                                       <div class="row">
-                                        <div class="col-sm-6">
-                                             <div class="form-group">
-                                                <label for="phoneNumber">Phone Number</label>
-                                                <input type="text" class="form-control" id="phoneNumber" placeholder="555-555-5555">
-                                            </div>
-                                       </div>
-                                        <div class="col-sm-6">
-                                              <div class="form-group">
-                                                  <label for="email">Email</label>
-                                                <input type="text" class="form-control" id="email" placeholder="Enter email">
-                                            </div>
-                                       </div>
-                                    </div>
-                                    
-                                        <div class="form-group row">
-                                            <div class="col-sm-6">
-                                                <fieldset class="form-group">
-                                                <label>Add to Project</label>
-                                                <select id="select2-2" class="form-control select2-multiple" multiple="">
-                                                    <option>Option 1</option>
-                                                    <option selected="">Option 2</option>
-                                                    <option>Option 3</option>
-                                                    <option>Option 4</option>
-                                                    <option>Option 5</option>
-                                                 </select>
-                                                </fieldset>
-                                        </div>
-                                            <div class="col-sm-6">
-                                                <fieldset class="form-group">
-                                                <label>Add Tags</label>
-                                                <select id="select2-2" class="form-control select2-multiple" multiple="">
-                                                    <option>Option 1</option>
-                                                    <option selected="">Option 2</option>
-                                                    <option>Option 3</option>
-                                                    <option>Option 4</option>
-                                                    <option>Option 5</option>
-                                                 </select>
-                                                </fieldset>
-                                        </div>
-                                        </div>
-                                </div>
-                            </div>
-
-                        </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
-                </div>
-                <!-- /.modal -->
-           
-
-
-<div class="container-fluid mt-2">
+ <div class="container-fluid mt-2">
                 <div class="animated fadeIn">
-                    
-                    <!--Action Buttons-->
-                    
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <a href="create-project.html">
-                            <div class="card">
-                                <div class="card-block p-1 clearfix">
-                                    <i class="icon-star bg-warning font-2xl mr-1 p-1 float-left"></i>
-                                    <div class="h5 text-primary mt-1 mb-0">Create Project</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <a data-toggle="modal" href="#addContact">
-                             <div class="card">
-                                 <div class="card-block p-1 clearfix">
-                                    <i class="icon-user-follow bg-danger font-2xl mr-1 p-1 float-left"></i>
-                                    <div class="h5 text-primary mt-1 mb-0">Create Contact</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                             <a href="new-tag.html">
-                             <div class="card">
-                                 <div class="card-block p-1 clearfix">
-                                    <i class="icon-tag bg-warning font-2xl mr-1 p-1 float-left"></i>
-                                    <div class="h5 text-primary mt-1 mb-0">Create Tag</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    
-                    
-                        <div class="col-md-4 col-sm-6">
-                            <a href="new-message.html">
-                            <div class="card">
-                                <div class="card-block p-1 clearfix">
-                                    <i class="fa fa-edit  bg-success font-2xl mr-1 p-1 float-left"></i>
-                                    <div class="h5 text-primary mt-1 mb-0">Send Messages</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <a href="#zoomInvite">
-                             <div class="card">
-                                 <div class="card-block p-1 clearfix">
-                                    <i class="icon-camrecorder bg-info font-2xl mr-1 p-1 float-left"></i>
-                                    <div class="h5 text-primary mt-1 mb-0">Zoom</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                             <a href="#inviteOthers">
-                             <div class="card">
-                                 <div class="card-block p-1 clearfix">
-                                    <i class="fa fa-paper-plane bg-success font-2xl mr-1 p-1 float-left"></i>
-                                    <div class="h5 text-primary mt-1 mb-0">Invite Others</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!--End Action Buttons-->
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h5 class="text-muted mb-1">PROJECTS</h5>
-                        </div>
-                    </div>
-                    <!--Start Project Cards-->
-                    
-                           <!--Start Project 1-->
+                    <div class="animated fadeIn">
+                        
+                        <!--Start Project 1-->
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card">
@@ -188,21 +27,21 @@
                             <div class="col-md-12 mb-2">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#waiting" role="tab" aria-controls="waiting">Waiting to hear from you &nbsp;<span class="badge badge-pill badge-default">3</span></a>
+                                        <a class="nav-link active" data-toggle="tab" href="#waiting2" role="tab" aria-controls="waiting">Waiting to hear from you &nbsp;<span class="badge badge-pill badge-default">3</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#followups" role="tab" aria-controls="followups">Follow ups&nbsp;<span class="badge badge-pill badge-warning">15</span></a>
+                                        <a class="nav-link" data-toggle="tab" href="#followups2" role="tab" aria-controls="followups">Follow ups&nbsp;<span class="badge badge-pill badge-warning">15</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#yes" role="tab" aria-controls="yes">Yes&nbsp;<span class="badge badge-pill badge-success">7</span></a>
+                                        <a class="nav-link" data-toggle="tab" href="#yes2" role="tab" aria-controls="yes">Yes&nbsp;<span class="badge badge-pill badge-success">7</span></a>
                                     </li>
                                      <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#no" role="tab" aria-controls="no">No&nbsp;<span class="badge badge-pill badge-danger">5</span></a>
+                                        <a class="nav-link" data-toggle="tab" href="#no2" role="tab" aria-controls="no">No&nbsp;<span class="badge badge-pill badge-danger">5</span></a>
                                     </li>
                                 </ul>
 
                                 <div class="tab-content">
-                                    <div class="tab-pane active" id="waiting" role="tabpanel">
+                                    <div class="tab-pane active" id="waiting2" role="tabpanel">
                                        <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="card">
@@ -292,7 +131,7 @@
                                            </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="followups" role="tabpanel">
+                                    <div class="tab-pane" id="followups2" role="tabpanel">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="card">
@@ -431,7 +270,7 @@
                                            </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="yes" role="tabpanel">
+                                    <div class="tab-pane" id="yes2" role="tabpanel">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="card">
@@ -616,7 +455,7 @@
                                            </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="no" role="tabpanel">
+                                    <div class="tab-pane" id="no2" role="tabpanel">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="card">
@@ -776,21 +615,21 @@
                             <div class="col-md-12 mb-2">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#waiting1" role="tab" aria-controls="waiting">Waiting to hear from you &nbsp;<span class="badge badge-pill badge-default">3</span></a>
+                                        <a class="nav-link active" data-toggle="tab" href="#waiting3" role="tab" aria-controls="waiting">Waiting to hear from you &nbsp;<span class="badge badge-pill badge-default">3</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#followups1" role="tab" aria-controls="followups">Follow ups&nbsp;<span class="badge badge-pill badge-warning">15</span></a>
+                                        <a class="nav-link" data-toggle="tab" href="#followups3" role="tab" aria-controls="followups">Follow ups&nbsp;<span class="badge badge-pill badge-warning">15</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#yes1" role="tab" aria-controls="yes">Yes&nbsp;<span class="badge badge-pill badge-success">7</span></a>
+                                        <a class="nav-link" data-toggle="tab" href="#yes3" role="tab" aria-controls="yes">Yes&nbsp;<span class="badge badge-pill badge-success">7</span></a>
                                     </li>
                                      <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#no1" role="tab" aria-controls="no">No&nbsp;<span class="badge badge-pill badge-danger">5</span></a>
+                                        <a class="nav-link" data-toggle="tab" href="#no3" role="tab" aria-controls="no">No&nbsp;<span class="badge badge-pill badge-danger">5</span></a>
                                     </li>
                                 </ul>
 
                                 <div class="tab-content">
-                                    <div class="tab-pane active" id="waiting1" role="tabpanel">
+                                    <div class="tab-pane active" id="waiting3" role="tabpanel">
                                        <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="card">
@@ -877,7 +716,7 @@
                                            </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="followups1" role="tabpanel">
+                                    <div class="tab-pane" id="followups3" role="tabpanel">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="card">
@@ -1019,7 +858,7 @@
                                            </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="yes1" role="tabpanel">
+                                    <div class="tab-pane" id="yes3" role="tabpanel">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="card">
@@ -1204,7 +1043,7 @@
                                            </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="no1" role="tabpanel">
+                                    <div class="tab-pane" id="no3" role="tabpanel">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="card">
@@ -1336,15 +1175,8 @@
                             </div>
                         </div>
                         <!--end project 2-->
-                    <!--/.row-->
-
-                    <!--/.row-->
+                        
+                    </div>
                 </div>
-
-
+                <!-- /.conainer-fluid -->
             </div>
-            <!-- /.conainer-fluid -->
-        
-
-<div ng-controller="toastrWelcome"></div>
-<script src="js/libs/select2.min.js"></script>

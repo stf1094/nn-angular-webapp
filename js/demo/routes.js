@@ -75,6 +75,83 @@ angular
       }]
     }
   })
+ .state('app.hotlist', {
+    url: '/hotlist',
+    templateUrl: 'views/hotlist.html',
+    ncyBreadcrumb: {
+      label: '{{ "Hotlist" | translate }}'
+    }
+  })
+ .state('app.contacts', {
+    url: '/contacts',
+    templateUrl: 'views/contacts.html',
+    ncyBreadcrumb: {
+      label: '{{ "Contacts" | translate }}'
+    }
+  })
+ .state('app.projects', {
+    url: '/projects',
+    templateUrl: 'views/projects.html',
+    ncyBreadcrumb: {
+      label: '{{ "Projects" | translate }}'
+    }
+  })
+ .state('app.reporting', {
+    url: '/reporting',
+    templateUrl: 'views/reporting.html',
+    ncyBreadcrumb: {
+      label: '{{ "Reporting" | translate }}'
+    }
+  })
+ .state('app.downline', {
+    url: '/downline',
+    templateUrl: 'views/downline.html',
+    ncyBreadcrumb: {
+      label: '{{ "Downline" | translate }}'
+    }
+  })
+ .state('app.calendar', {
+    url: '/calendar',
+    templateUrl: 'views/calendar.html',
+    ncyBreadcrumb: {
+      label: '{{ "Calendar" | translate }}'
+    }
+  })
+ .state('app.recent-messages', {
+    url: '/recent-messages',
+    templateUrl: 'views/recent-messages.html',
+    ncyBreadcrumb: {
+      label: '{{ "Recent Messages" | translate }}'
+    }
+  })
+ .state('app.profile', {
+    url: '/profile',
+    templateUrl: 'views/profile.html',
+    ncyBreadcrumb: {
+      label: '{{ "Profile" | translate }}'
+    }
+  })
+ .state('app.new-message', {
+    url: '/new-message',
+    templateUrl: 'views/new-message.html',
+    ncyBreadcrumb: {
+      label: '{{ "New Message" | translate }}'
+    }
+  })
+ .state('app.create-project', {
+    url: '/create-project',
+    templateUrl: 'views/create-project.html',
+    ncyBreadcrumb: {
+      label: '{{ "Create Project" | translate }}'
+    }
+  })
+ .state('app.new-tag', {
+    url: '/new-tag',
+    templateUrl: 'views/new-tag.html',
+    ncyBreadcrumb: {
+      label: '{{ "New Tag" | translate }}'
+    }
+  })
   .state('app.components', {
     url: "/components",
     abstract: true,
