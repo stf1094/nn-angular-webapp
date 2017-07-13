@@ -3446,7 +3446,9 @@ header.navbar {
   margin-bottom: 1rem;
   list-style: none;
   background-color: transparent;
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem;
+  display: none;
+}
   .breadcrumb::after {
     display: block;
     content: "";

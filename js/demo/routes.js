@@ -152,6 +152,34 @@ angular
       label: '{{ "New Tag" | translate }}'
     }
   })
+ .state('app.account-profile', {
+    url: '/account-profile',
+    templateUrl: 'views/account-profile.html',
+    ncyBreadcrumb: {
+      label: '{{ "Account Profile" | translate }}'
+    }
+  })
+ .state('app.create-template', {
+    url: '/create-template',
+    templateUrl: 'views/create-template.html',
+    ncyBreadcrumb: {
+      label: '{{ "Create Template" | translate }}'
+    }
+  })
+ .state('app.settings', {
+    url: '/settings',
+    templateUrl: 'views/settings.html',
+    ncyBreadcrumb: {
+      label: '{{ "Settings" | translate }}'
+    }
+  })
+ .state('app.payments', {
+    url: '/payments',
+    templateUrl: 'views/payments.html',
+    ncyBreadcrumb: {
+      label: '{{ "Payments" | translate }}'
+    }
+  })
   .state('app.components', {
     url: "/components",
     abstract: true,

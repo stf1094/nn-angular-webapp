@@ -50,7 +50,7 @@ for (i = 0; i < acc.length; i++) {
     }
 }
 
-var acc = document.getElementsByClassName("accordion-downline");
+var acc = document.getElementsByClassName("accordion-body");
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -64,3 +64,14 @@ for (i = 0; i < acc.length; i++) {
         }
     }
 }
+
+/*Accordion with jquery*/
+
+function toggleAccordion() {
+ $('.accordion-body').hide();
+ $('.accordion').on('click', function(){
+   $(this).next().slideToggle(400);
+   $(this).toggleClass('active');
+ });
+}
+$(document).ready(toggleAccordion);

@@ -19,7 +19,7 @@ angular
 
 toastrWelcome.$inject = ['$scope', 'toastr'];
 function toastrWelcome($scope, toastr) {
-    toastr.info('Bootstrap 4 Admin Template', 'Welcome to Leaf Admin', {
+    toastr.info('Welcome to Your Network Ninjas Dashboard', {
         closeButton: true,
         progressBar: true,
     });
