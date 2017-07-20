@@ -1,9 +1,9 @@
 // Default colors
-var brandPrimary =  '#20a8d8';
-var brandSuccess =  '#4dbd74';
-var brandInfo =     '#63c2de';
-var brandWarning =  '#f8cb00';
-var brandDanger =   '#f86c6b';
+var brandPrimary =  '#5c777d';
+var brandSuccess =  '#afd274';
+var brandInfo =     '#5c777d';
+var brandWarning =  '#f2aa5c';
+var brandDanger =   '#f05e68';
 
 var grayDark =      '#2a2c36';
 var gray =          '#55595c';
@@ -33,7 +33,7 @@ angular
   return $rootScope.$stateParams = $stateParams;
 }]);
 
- /* ---------- Accordian feature in downline tables ---------- */
+ /* ---------- Accordian feature in downline tables ---------- 
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -63,7 +63,7 @@ for (i = 0; i < acc.length; i++) {
             panel.style.display = "block";
         }
     }
-}
+} */
 
 /*Accordion with jquery*/
 
