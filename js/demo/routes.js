@@ -180,6 +180,13 @@ angular
       label: '{{ "Payments" | translate }}'
     }
   })
+ .state('app.affiliate', {
+    url: '/affiliate-stats',
+    templateUrl: 'views/affiliate.html',
+    ncyBreadcrumb: {
+      label: '{{ "Affiliate Stats" | translate }}'
+    }
+  })
   .state('app.components', {
     url: "/components",
     abstract: true,
