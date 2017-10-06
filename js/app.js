@@ -33,7 +33,7 @@ angular
   return $rootScope.$stateParams = $stateParams;
 }]);
 
- /* ---------- Accordian feature in downline tables ---------- 
+ /* ---------- Accordian feature in downline tables ---------- */
 
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -63,7 +63,7 @@ for (i = 0; i < acc.length; i++) {
             panel.style.display = "block";
         }
     }
-} */
+} 
 
 /*Accordion with jquery*/
 
@@ -75,3 +75,4 @@ function toggleAccordion() {
  });
 }
 $(document).ready(toggleAccordion);
+
