@@ -1,0 +1,280 @@
+<div class="row mt-2">
+    <div class="col-md-12">
+        <div class="card">
+            <div ng-controller="newContactsCtrl">
+                <div class="card-header">
+                    <h4>Early Adopter Affiliate Program</h4>
+                </div>
+                <div class="card-block">
+                   <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                                <label for="name">First Name</label>
+                                <input id="txtFirstName" type="text" class="form-control" id="name" maxlength="100" placeholder="Enter first name" required>
+                            </div>
+                       </div>
+                        <div class="col-sm-6">
+                        <div class="form-group">
+                                <label for="name">Last Name</label>
+                                <input id="txtLastName" type="text" class="form-control" id="name" maxlength="100" placeholder="Enter last name" required>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                             <div class="form-group">
+                                <label for="phoneNumber">Phone Number</label> 
+                               <!-- <input id="txtPreferredPhone" type="text" class="form-control" id="phoneNumber" placeholder="555-555-5555"> -->
+                                <input id="txtPreferredPhone" type="text" placeholder="{{uiformat}}" class="form-control" ng-model="phone"   ui-mask="{{phoneUIMask}}" required>
+                            </div>
+                       </div>
+                        <div class="col-sm-6">
+                              <div class="form-group">
+                                    <label>Country</label>
+                                    <ui-select ng-model="country.selected" theme="bootstrap" ng-blur="getCountrCode(country.code,country.uimask,country.uiformat)" >
+                                        <ui-select-match placeholder="Select or search a country in the list...">{{$select.selected.name}}</ui-select-match>
+                                        <ui-select-choices repeat="country in countries | filter: $select.search">
+                                            <span ng-bind-html="country.name | highlight: $select.search"  ng-click="getCountrCode(country.code,country.uimask,country.uiformat)"></span>
+                                            <small ng-bind-html="country.code | highlight: $select.search" ng-click="getCountrCode(country.code,country.uimask,country.uiformat)" ></small>
+                                        </ui-select-choices>
+                                    </ui-select>
+                                   <!-- <small class="text-muted">Selected: {{country.selected}}</small> -->
+                                </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                         <div class="col-sm-6">
+                              <div class="form-group">
+                                  <label for="email">Email</label>
+                                <input  id="txtPreferredEmail" type="email" class="form-control" required placeholder="Enter email" >
+                            </div>
+                       </div>
+                        <div class="col-sm-6">
+                             <div class="form-group">
+                                <label for="confirmemail">Confirm email</label>
+                               <!-- <input id="txtPreferredPhone" type="text" class="form-control" id="phoneNumber" placeholder="555-555-5555"> -->
+                                <input id="txtConfirmEmail" type="email" class="form-control"  required placeholder="Confirm email" >
+                            </div>
+                       </div>
+
+                    </div>
+                    <div class="row">
+                         <div class="col-sm-6">
+                              <div class="form-group">
+                                  <label for="email">Referred by</label>
+                                 <!-- <input type="email" class="form-control" id="to" placeholder="Type email"> -->
+                                    <ui-select multiple ng-model="multipleDemo.selectedPeople" theme="select2" ng-disabled="disabled">
+                                        <ui-select-match placeholder="Who referred you?">{{$item.name}} &lt;{{$item.email}}&gt;</ui-select-match>
+                                        <ui-select-choices  repeat="person in people | propsFilter: {name: $select.search, age: $select.search}">
+                                            <div  ng-bind-html="person.name | highlight: $select.search"  ng-click="getReferralData(person.downlineCustomerEntityIID, person.downlineEntityIID)"></div>
+                                            <small ng-click="getReferralData(person.rootCustomerEntityIID, person.entityIID)">
+                                                email: {{person.email}}
+                                            </small>
+                                        </ui-select-choices>
+                                    </ui-select>
+                            </div>
+                       </div>
+                       </div>               
+                    </div>
+                </div>
+                <div class="card-footer">
+                     <button id="btnCanel" type="button" class="btn btn-secondary"  ng-click="resetScreen()">Cancel</button>
+                     <button id="btnSave" type="button" class="btn btn-primary" ng-click="saveAfilliate()">Save changes</button>
+                     <label id="lblValidate" class="ml-1"  color="red" for="validation"><font id="fontValidation" color="red">{{validationMessage}}</font> </label> 
+                </div>
+            <div>
+        </div>
+     
+				
+         </div>
+    </div>
+</div>
+
+    <!--PRICING TABLE-->
+<div class="row">
+<div class="col-md-12">
+<div class="card">
+    <div class="card-block">
+    <div class="row">
+      <section class="content-block pricing-table-3">
+		<div class="container-fluid">
+			<div class="underlined-title">
+	        	<h1>Plans and Pricing</h1>
+	    		<hr>
+	    		<h2>Options for those just starting out and experienced business owners</h2>
+	    	</div>
+			<div class="row">
+                    <div class="col-md-3 plan">
+						<!--<div class="ribbon red-hot"></div>-->
+							<header style="background: #f05e68;">
+								<h2>Basic</h2>
+								
+								<div class="price">
+                                    <div class="row">
+                                        <div class="col-6 push-1" style="margin-left: 10%">
+                                             <span class="currency">$</span>
+                                             <span class="amount">9</span>
+                                        </div>
+                                        <div class="col-4 pull-1">
+                                             <span class="amount-sm">.99</span>
+									         <span class="period" style="display: block; margin-top: 30%">/ Mo</span>
+                                        </div>
+                                    </div>
+								</div><!-- /.price -->
+							</header>
+							
+							<ul class="features">
+								<li><i class="fa fa-users"></i>Merges Contacts from Phone, Email, Social Media </li>
+								<li><i class="fa fa-user"></i>Virtual business card profile</li>
+								<li>&nbsp;</li>
+								<li>&nbsp;</li>
+								<li>&nbsp;</li>
+                                <li>&nbsp;</li>
+							</ul><!-- /.features -->
+					</div><!-- /.price-block -->
+					<div class="col-md-3 plan">
+						<!--<div class="ribbon red-hot"></div>-->
+							<header>
+								<h2>ENHANCED</h2>
+								
+								<div class="price">
+									<span class="currency">$</span>
+									<span class="amount">59</span>
+									<span class="period">/ Mo</span>
+								</div><!-- /.price -->
+							</header>
+							
+							<ul class="features">
+								<li>All Basic Contains PLUS: </li>
+								<li><i class="fa fa-star"></i>Unlimted Projects, Groups, and Tags</li>
+								<li><i class="fa fa-fire"></i>Hot List and Reporting Insights</li>
+								<li><i class="fa fa-calendar-o"></i>Syncs with Calendar</li>
+                                <li><i class="fa fa-repeat"></i>Follow up Reminders</li>
+								<li><i class="fa fa-bolt"></i>Text Blitzing</li>
+							</ul><!-- /.features -->
+					</div><!-- /.price-block -->
+					
+					<div class="col-md-3 plan">
+						<!--<div class="ribbon popular"></div> -->
+							<header style="background: #afd274;">
+								<h2>PROFESSIONAL</h2>
+								
+								<div class="price">
+									<span class="currency">$</span>
+									<span class="amount">99</span>
+									<span class="period">/ Mo</span>
+								</div><!-- /.price -->
+							</header>
+							
+							<ul class="features">
+								<li>All Enhanced Contains PLUS:</li>
+								<li><i class="fa fa-level-up"></i>Upline/Downline Capabilities</li>
+								<li><i class="fa fa-level-down"></i>Downline Reporting and Project Insights</li>
+								<li><i class="fa fa-video-camera"></i> Zoom Video Integration</li>
+								<li><!--<i class="fa fa-calendar"></i> --> &nbsp; </li>
+                                <li><!--<i class="fa fa-calendar"></i> --> &nbsp; </li>
+							</ul><!-- /.features -->
+					</div><!-- /.price-block -->
+					
+					<div class="col-md-3 plan">
+							<header style="background: #f2aa5c;">
+								<h2>ENTERPRISE</h2>
+								
+								<div class="price">
+									<span class="currency">$</span>
+									<span class="amount">149</span>
+									<span class="period">/ Mo</span>
+								</div><!-- /.price -->
+							</header>
+							
+							<ul class="features">
+                                <li>All Pro Contains PLUS:</li>
+								<li><i class="fa fa-building-o"></i> Multiple Business Ventures</li>
+								<li><i class="fa fa-dashboard"></i> Multiple Business Dashboards </li>
+								<li><i class="fa fa-envelope"></i> Email Autoresponder</li>
+								<li><!--<i class="fa fa-laptop"></i> --> &nbsp; </li>
+                                <li><!--<i class="fa fa-calendar"></i> --> &nbsp; </li>
+
+							</ul><!-- /.features -->
+					</div><!-- /.price-block -->
+				
+				</div>
+				
+			</div><!-- /.row -->
+			
+		<!-- /.container -->
+	</section>
+    </div>
+    </div>
+    </div>
+        </div>
+</div>
+
+<!--COMMISSION SLIDER-->
+    <div class="card card-default-bold">
+        <div class="card-block">
+            <div class="row">
+                <div class="container-fluid"> 
+                    <div class="commissions-box">
+                        <form class="form-horizontal form-pricing" role="form">
+                             <div class="row">
+                                <div class="col-sm-5">
+                                        <h2>Commissions Calculator</h2>
+                                        <p>How many friends and collegues can you show The Network Ninjas to? Choose the number of people you think you can help, then see how many levels deep this can duplicate. <strong>This figure assumes perfect duplication, limits to 5 levels, and models the $5 commission structure avaialble with Enhanced, Pro, and Enterprise Plans.</strong></p>
+                                      <div class="commissions-slider mt-3">
+                                        <h4 class="great">Referrals</h4>
+                                      <!-- <span>How many people can you refer?</span> -->
+                                        <div>
+                                          <div id="slider"></div>
+                                        </div>
+                                      </div>
+                                      <div class="commissions-slider">
+                                        <h4 class="great">Levels Deep</h4>
+                                      <!-- <span>How many levels deep can this duplicate?</span> -->
+                                        <div>
+                                          <div id="slider2"></div>
+                                        </div>
+                                      </div>
+                                   </div>
+                                <div class="col-sm-7">
+                                      <div class="commissions-form">
+                                            <div class="form-group">
+                                                  <label for="referrals" class="col-sm-6 control-label">Referrals: </label>
+                                                  <span class="help-text">People you refer</span>
+                                                  <div class="col-sm-6 push-6">
+                                                        <input type="hidden" id="referrals" class="form-control">
+                                                        <p class="commissions lead" id="referrals-label"></p>
+                                                       <span class="commissions">Referrals</span>
+                                                  </div>
+                                            </div>
+                                            <div class="form-group">
+                                                  <label for="levels" class="col-sm-6 control-label">Levels Deep: </label>
+                                                  <span class="help-text">Levels of duplication</span>
+                                                  <div class="col-sm-6 push-6">
+                                                        <input type="hidden" id="levels" class="form-control">
+                                                        <p class="commissions lead" id="levels-label"></p>
+                                                        <span class="commissions">Levels Deep</span>
+                                                  </div>
+                                            </div>
+                                            <hr class="style">
+                                            <div class="form-group total">
+                                                  <label for="total" class="col-sm-6 control-label"><strong>Total: </strong></label>
+                                                  <span class="help-text">Commissions / Month</span>
+                                                  <div class="col-sm-6 push-6">
+                                                        <input type="hidden" id="total" class="form-control">
+                                                        <p class="commissions lead" id="total-label"></p>
+                                                       <!-- <span class="commissions">/MONTH</span> -->
+                                                  </div>
+                                            </div>
+                                     </div>
+                               </div>
+                        </div>
+                    </form>
+                    <p class="text-center text-muted mt-2">
+                          Disclaimer: The calculation tool presented above is for marketing purposes only; it is not a guarantee of income or results.  The results calculated are gross figures, and assume symmetric growth of the user’s Associate Network, which is unlikely.  Growth of any user’s Associate Network is the responsibility of the user, and Network Ninja’s does not guarantee results based on the use of its applications or marketing tools.
+                    </p>
+                    </div>
+                 </div> <!--End COMMISSION SLIDER-->
+                </div>
+            </div>
+        </div>
