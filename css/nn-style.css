@@ -643,7 +643,7 @@ pre {
 
 .container-fluid {
   position: relative;
-  min-width: 992px;
+ /* min-width: 992px;*/
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
