@@ -69,6 +69,7 @@
 .pricing-table-3 .plan .price {
 	margin-bottom: 15px;
 	color: #ffffff;
+    padding-left: 24px;
 }
 
 .pricing-table-3 .plan .price * {
@@ -79,6 +80,19 @@
 .pricing-table-3 .plan .price .amount {
 	font-size: 81px;
 	font-weight: 900;
+}
+
+.pricing-table-3 .plan .price .amount sup {
+	font-weight: 700;
+    font-size: 24px;
+    top: -1.5em;
+}
+.pricing-table-3 .plan .price .amount sub {
+	font-weight: 700;
+    font-size: 16px;
+    left: -38px;
+    top: -3px;
+    
 }
 
 .pricing-table-3 .plan .price .amount-sm {
@@ -141,6 +155,33 @@
 
 .pricing-table-3 .col-4 .plan .features {
 	padding: 20px 30px;
+}
+
+/*MEDIA QUERIES FOR PRICING TABLE*/
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
+    .pricing-table-3 .plan .price .amount {
+	font-size: 50px;
+	font-weight: 700;
+}
+    .pricing-table-3 .plan .price .amount sup {
+	font-weight: 600;
+    font-size: 20px;
+    top: -20px;
+    left: 5px;    
+}
+    .pricing-table-3 .plan .price .amount sub {
+	font-weight: 700;
+    font-size: 16px;
+    left: -29px;
+    top: 1px;
+   }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .pricing-table-3 .plan h2 {
+        font-size: 16px;}
+    
 }
 
 /*SLIDER STYLES - REQUIRES JQUERY-UI CDN*/
@@ -344,3 +385,4 @@ hr.style {
         left: 0%;
     }
 }
+
