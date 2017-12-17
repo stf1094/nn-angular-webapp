@@ -727,6 +727,10 @@ button:hover {
     padding-bottom: 30px;
 }
 
+.help-dojo-content li {
+    font-size: 16px;
+}
+
 .help-dojo-menu {
     padding-left: 25px;
     padding-top: 25px;
