@@ -589,7 +589,7 @@ button:hover {
     text-align: center;
     padding: 50px;
     height: 400px;
-    background: url(/site/img/bg-blue-pattern.png) center center;
+    background: url(/site/img/bg-blue-300.png) center center;
     background-size: cover;
 }
 
@@ -1354,7 +1354,7 @@ button:hover {
 /*----------------------------------------------------*/
 
 .promo-3 {
-	background: url("../img/people-laughing-fade4.png") center top no-repeat;
+	background: url("../img/people-laughing-and-networking.png") center top no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
