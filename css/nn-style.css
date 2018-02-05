@@ -463,6 +463,9 @@ h6, .h6 {
 .display-inline {
     display: inline-block;
 }
+.gray-border {
+    border: 1px solid gray;
+}
 
 .display-1 {
   font-size: 6rem;

@@ -1,51 +1,329 @@
+<!--Account Page 
+    -- Note the commented out divs, which divs should appear when different buttons are clicked
+    -- All account editing can be done on this screen, including adding and managing payment methods
+    -- I tried to add id's as much as possible where I think they need to be accessed from js controllers
+    -- Adding Payment divs surrounded in a gray border to indicate the user to focus on them
+    -->
+               
+                
          <div class="container-fluid mt-2">
                 <div class="animated fadeIn">
                     <div class="card card-secondary-bold">
                        <div class="card-header">
-                                   <i class="fa fa-gear"></i><strong>Settings</strong>
+                                   <i class="fa fa-gear"></i><strong>Account</strong>
                                  </div>
                                 <div class="card-block">
+                                
+                            <!--User Profile: 
+                                - When the edit button is clicked, all spans turn to input fields, which are commented out currently
+                                - A "Save changes" button also appears below the User Profile section
+                                - Change id's of elements as needed
+                                - The class ".profileField" does not have any styles, but is there for javascript purposes
+                             -->
+                             
+                             <div id="accountUserProfile" class="mt-1 mb-3">
+                                <h5 class="display-inline">User Profile</h5>
+                                <button class="btn btn-link display-inline" id="editUserProfile">Edit</button>
+                                <hr>
+                                <div class="pl-3">
                                 <div class="row">
-                                    <div class="col-sm-12">
-                                        <h5>Account Summary</h5>
+                                    <div class="col-sm-5">
+                                         <div class="form-group">
+                                            <label for="first name" class="text-muted">First Name</label>
+                                            <span class="h5 display-block font300 profileField" id="userFirstName">Ned</span>
+                                           <!--<input type="text" class="form-control" id="" placeholder="First Name">-->
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                            <div class="form-group">
+                                            <label for="last name" class="text-muted">Last Name</label>
+                                            <span class="h5 display-block font300 profileField" id="userLastName">Ninja</span>
+                                           <!-- <input type="text" class="form-control" id="name" placeholder="Last Name">-->
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-7">
-                                        <div class="form-group row mt-2">
-                                            <label class="col-md-3 form-control-label">Username</label>
-                                            <div class="col-md-9">
-                                                <span class="form-control-static">email@email.com</span><br>
-                                                <a href="#"><span>Change email</span></a>
-                                            </div>
+                                 <div class="row mt-2">
+                                    <div class="col-sm-5">
+                                         <div class="form-group">
+                                            <label for="email" class="text-muted">Email</label>
+                                            <span class="h5 display-block font300 profileField" id="userEmail">ned@thedojo.com</span>
+                                           <!-- <input type="text" class="form-control" id="name" placeholder="Email">-->
                                         </div>
-                                        <div class="form-group row mt-2">
-                                            <label class="col-md-3 form-control-label">Account Plan</label>
-                                            <div class="col-md-9">
-                                                <span class="form-control-static">Enhanced</span><br>
-                                                <a href="#"><span>Manage Account Plan</span></a>
-                                            </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                            <div class="form-group">
+                                            <label for="phone number" class="text-muted">Phone</label>
+                                            <span class="h5 display-block font300 profileField" id="userPhoneNumber">000-000-0002</span>
+                                           <!-- <input type="text" class="form-control" id="name" placeholder="Phone Number">-->
                                         </div>
-                                        <div class="form-group row mt-2">
-                                            <label class="col-md-3 form-control-label" for="select">Time Zone</label>
-                                                <div class="col-md-7">
-                                                    <select id="select" name="select" class="form-control" size="1">
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-sm-5">
+                                         <div class="form-group">
+                                            <label for="company" class="text-muted">Company</label>
+                                            <span class="h5 display-block font300 profileField" id="userCompany">The Dojo Inc.</span>
+                                           <!-- <input type="text" class="form-control" id="name" placeholder="Company">-->
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                            <div class="form-group">
+                                            <label for="facebook profile" class="text-muted">Facebook Profile</label>
+                                            <span class="h5 display-block font300 profileField" id="userFacebook">facebooklink.com/1/</span>
+                                           <!-- <input type="text" class="form-control" id="name" placeholder="Facebook Profile">-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-sm-5">
+                                         <div class="form-group">
+                                            <label for="company" class="text-muted">LinkedIn Profile</label>
+                                            <span class="h5 display-block font300 profileField" id="userCompany">linkedinlink.com/1/</span>
+                                           <!-- <input type="text" class="form-control" id="name" placeholder="Company">-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Save changes Button
+                                <button class="btn btn-success mt-3" id="userProfileSaveBtn">Save changes</button> -->
+                                </div>
+                                       
+                                        
+                             </div>
+                              
+                              <!--Account Settings 
+                                  - When the edit button is clicked, username field to to form field, same as user profile above
+                                  - Same with timeZone
+                               -->
+                               <div id="accountSettings" class="my-3">
+                                    <h5 class="display-inline">Settings</h5>
+                                     <button class="btn btn-link display-inline">Edit</button>
+                                    <hr>
+                                    <div class="pl-3">
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <div class="form-group mt-2">
+                                                    <label for="name" class="text-muted">Username</label>
+                                                    <span class="h5 display-block" style="font-weight: 300;">NedTheNinja69</span>
+                                                   <!-- <input type="text" class="form-control" id="name" placeholder="Enter your name">-->
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group mt-2">
+                                                     <label for="name" class="text-muted">Time Zone</label>
+                                                     <select id="select" name="select" class="form-control" size="1">
                                                         <option value="0">Please select a time zone</option>
                                                         <option value="1">Eastern </option>
                                                         <option value="2">Central</option>
                                                         <option value="3">Mountain</option>
                                                         <option value="3">Pacific</option>
-                                                    </select>
+                                                     </select>
                                                 </div>
                                             </div>
+                                        </div>
+                                    <!--Save changes Button
+                                    <button class="btn btn-success mt-3" id="userProfileSaveBtn">Save changes</button>-->
+                                    </div>
+                               </div>
+                             <!--Account Plan 
+                                 - 
+                               
+                               -->
+                                <div id="accountPlan" class="my-3">
+                                <h5 class="my-1">Plan</h5>
+                                <hr>
+                                    <div class="form-group row mt-2 pl-3">
+                                        <div class="col-md-9">
+                                            <span class="h5 font300">Enhanced</span><br>
+                                            <button class="btn btn-link pl-0" type="button">Change account plan</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!--Change your account plan 
+                                        - should start hidden
+                                        - appears when changePlanBtn is clicked
+                                    
+                                    
+                                    <div class="row pl-3 py-2 mt-3 mx-1" style="border: 1px solid gray;" id="changePlan">
+                                          <div class="col-sm-8">
+                                           <h5>Select Plan</h5>
+                                            <div class="form-group pl-1">
+                                                <div class="radio">
+                                                    <label for="radio1" class="planOption">
+                                                        <input type="radio" id="" name="radios" value=""> Enhanced | $59.95/month
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label for="radio2" class="planOption">
+                                                        <input type="radio" id="" name="radios" value=""> Professional | $99.95/month
+                                                    </label>
+                                                </div>
+                                            </div>
+                                          <!--Save changes Button
+                                        <button class="btn btn-success mt-2" id="userProfileSaveBtn">Save changes</button> 
+                                        </div>
+                                     </div>
+                                </div> -->
+                                
+                            <!--Account Payments
+                                - 
+                               -->
+                                <div id="accountBilling" class="my-3">
+                                    <h5 class="my-1">Billing</h5>
+                                    <hr>
+                                    <div class="row pl-3">
+                                        <div class="col-sm-5">
+                                            <div class="form-group mt-2">
+                                               <label for="name" class="text-muted">Payment</label>
+                                               <span class="display-block h5 font300" id="cardBrand">VISA</span>
+                                                <span class="h5 display-block font300" id="cardNumber">*************7896</span>
+                                                <button class="btn btn-link pl-0" id="addPaymentBtn">Add new payment method</button><br>
+                                                <button class="btn btn-link pl-0" id="chnagePaymentBtn">Change Payment method</button>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="form-group mt-2">
+                                               <label for="name" class="text-muted">Billing Address</label>
+                                               <span class="display-block h6 font300" id="">Ned Ninja</span>
+                                                <span class="h6 display-block font300" id="">7 Main Ln</span>
+                                                <button class="btn btn-link pl-0" id="addPaymentBtn">Change Address</button>
+                                            </div>
+                                        </div>
+                                   </div>
                                    
+                                   <!--Add new payment method form 
+                                       - apprears when addPaymentBtn is clicked
+                                       - Form is for adding payment methods within the Network Ninjas WebApp
+                                    -->
+                                   
+                                   <div class="row pl-3" id="addNewPaymentMethod">
+                                       
+                                   </div>
+                                   
+                                   <!--Select New Payment Method
+                                       - Appears when changePaymentBtn is clicked
+                                       - A list appears with radio buttons to choose the payment method
+                                   -->
+                                    
+                                     <div class="row p-2 mt-3 mx-1 gray-border" id="changePaymentMethod">
+                                          <div class="col-sm-8">
+                                           <h5>Select Payment Method</h5>
+                                            <div class="form-group pl-1" id="paymentOptionList">
+                                                <div class="radio">
+                                                    <label for="" class="paymentOption">
+                                                        <input type="radio" id="" name="" value=""> Option 1
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label for="" class="paymentOption">
+                                                        <input type="radio" id="" name="" value=""> Option 2
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label for="" class="paymentOption">
+                                                        <input type="radio" id="" name="" value=""> Option 3
+                                                    </label>
+                                                </div>
+                                          </div>
+                                          <!--Save changes Button-->
+                                        <button class="btn btn-success mt-2" id="userProfileSaveBtn">Save changes</button>
+                                        </div>
+                                     </div>
+                                     
+                        <!--Credit card info-->
+                        <div class="p-2 mx-1 gray-border" style="border: 1px solid gray;">
+                        <h5>Add New payment Method</h5>
+                        <div class="row mt-2">
+                            <div class="col-sm-5 col-xs-12">
+                                    <div class="form-group mb-2">
+                                     <label for="street">First Name</label>
+                                        <input type="text" class="form-control" placeholder="First Name">
+                                    </div>
+                               </div>
+                               <div class="col-sm-5 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="street">Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Last Name">
                                     </div>
                                 </div>
-                    </div>
-                    <div class="card-footer">
-                           <div class="form-actions">
-                                <button type="submit" class="btn btn-success">Save changes</button>
-                           </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                       <label for="street">Card Number</label>
+                                        <input type="text" class="form-control" id="ccnumber" placeholder="0000 0000 0000 0000">
+                                    </div>
+                                </div>
+                                <!--Card images 
+                                     - when card # is entered, we can add the class ".opacity-full" to the card to indicate/confirm the card type. Also remove the class ".opacity-light"
+                                  -->
+                                <div class="col-sm-4 mt-1">
+                                    <img class="opacity-light" id="visa" src="/site/img/visa.jpg"/>
+                                    <img class="opacity-light" id="mastercard" src="/site/img/mastercard.jpg"/>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="form-group col-sm-2">
+                                    <label for="ccmonth">Month</label>
+                                    <select class="form-control" id="ccmonth">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-sm-2">
+                                    <label for="ccyear">Year</label>
+                                    <select class="form-control" id="ccyear">
+                                        <option>2018</option>
+                                        <option>2019</option>
+                                        <option>2020</option>
+                                        <option>2021</option>
+                                        <option>2022</option>
+                                        <option>2023</option>
+                                        <option>2024</option>
+                                        <option>2025</option>
+                                        <option>2026</option>
+                                        <option>2027</option>
+                                        <option>2028</option>
+                                        <option>2029</option>
+                                        <option>2030</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label for="cvv">CVV/CVC</label>
+                                        <input type="text" class="form-control" id="cvv" placeholder="123">
+                                    </div>
+                                </div>
+                        </div>
+                                <button class="btn btn-success mt-3">Save Card</button>
+                                   
+                               </div>
+                               </div>
+                        <div id="accountCommissions" class="my-3">
+                            <h5 class="my-1">Commissions</h5>
+                            <hr>
+                            <div class="row pl-3">
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <span class="h5 font300">Paypal</span><br>
+                                        <button class="btn btn-link pl-0" type="button" id="connectPaypalBtn">Connect Paypal Account</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
