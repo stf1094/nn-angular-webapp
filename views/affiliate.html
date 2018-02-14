@@ -1,74 +1,485 @@
-<div class="container-fluid mt-2">
-<div class="animated fadeIn">
-
-<div class="row">
-  <div class="col-lg-12">
-            <div class="card card-secondary-bold">
-                <div class="card-header">
-                    <i class="fa fa-sitemap"></i> <strong>Affiliate Stats</strong>
+<!--Affiliate Reporting and Stats 
+   -- Users can see their whole affiliate report here. No other pages to go to.
+    -- I tried to add id's where I thought necessary
+    
+-->
+ 
+ <div class="container-fluid mt-2">
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+         <div class="card">
+           <div class="card-block">
+                <div class="row px-1 py-q">
+                    <div class="col-md-7">
+                      <h1>Affiliate Stats</h1>
+                    </div>
+                    <div class="col-md-5">
+                      <a href="#" style="float: right;" class="btn btn-lg btn-warning">Invite Others
+                      </a>
+                    </div>
                 </div>
-                    <div class="card-block">
-                        <div class="row">  
-                        <div class="col-xxs-12 col-6 col-lg-4">
+                <hr>
+                <div class="row mt-1">  
+                    <div class="col-xs-12 col-lg-4">
+                        <div class="card">
+                            <div class="card-block p-1 clearfix">
+                                <i class="fa fa-dollar bg-primary p-1 font-5xl mr-1 px-2 float-left"></i>
+                                <div id="monthlyCommission" class="h2 text-primary mb-0 mt-h">235.00</div>
+                                <div class="text-muted text-uppercase font-weight-bold font-sm">Monthly Commission</div>
+                            </div>
+                        </div>
                       <div class="card">
                             <div class="card-block p-1 clearfix">
                                 <i class="fa fa-sitemap bg-primary p-1 font-5xl mr-1 float-left"></i>
-                                <div class="h2 text-primary mb-0 mt-h">27</div>
+                                <div id="totalReferrals" class="h2 text-primary mb-0 mt-h">57</div>
                                 <div class="text-muted text-uppercase font-weight-bold font-sm">Total Referrals</div>
                             </div>
-                    </div>
-                <a href="#" class="btn btn-warning btn-block mb-2">Invite Others</a>
-                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block p-1 clearfix">
+                                <i class="fa fa-users bg-primary p-1 font-5xl mr-1 float-left"></i>
+                                <div id="paidReferrals" class="h2 text-primary mb-0 mt-h">47</div>
+                                <div class="text-muted text-uppercase font-weight-bold font-sm">Paid Referrals</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-block p-1 clearfix">
+                                <i class="fa fa-users bg-primary p-1 font-5xl mr-1 float-left"></i>
+                                <div id="freeTrialReferrals" class="h2 text-primary mb-0 mt-h">10</div>
+                                <div class="text-muted text-uppercase font-weight-bold font-sm">Free Trial Referrals</div>
+                            </div>
+                        </div>
+                   </div>
         <!--/.col-->
-                    <div class="col-lg-8">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Level</th>
-                                <th>Enhanced</th>
-                                <th>Professional</th>
-                                <th>Enterprise</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </div><!--/.col-->
-                    </div><!--/.row-->
+               <!--Start of both Tables-->
+                   <div class="col-lg-8">
+                      <h5 class="mb-1">All Referrals</h5>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Level</th>
+                                    <th>Enhanced</th>
+                                    <th>Professional</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <!--Level 1-->
+                                <tr>
+                                    <td>1</td>
+                                    <td id="enhancedLevel1">5</td>
+                                    <td id="proLevel1">1</td>
+                                    <td id="totalLevel1">6</td>
+                                </tr>
+                                <!--Level 2-->
+                                <tr>
+                                    <td>2</td>
+                                    <td id="enhancedLevel2">5</td>
+                                    <td id="proLevel2">2</td>
+                                    <td id="totalLevel2">7</td>
+                                </tr>
+                                <!--Level 3-->
+                                <tr>
+                                    <td>3</td>
+                                    <td id="enhancedLevel3">9</td>
+                                    <td id="proLevel3">0</td>
+                                    <td id="totalLevel3">9</td>
+                                </tr>
+                                <!--Level 4-->
+                                <tr>
+                                    <td>4</td>
+                                    <td id="enhancedLevel4">12</td>
+                                    <td id="proLevel4">0</td>
+                                    <td id="totalLevel4">12</td>
+                                </tr>
+                                <!--Level 5-->
+                                <tr>
+                                    <td>5</td>
+                                    <td id="enhancedLevel5">23</td>
+                                    <td id="proLevel5">0</td>
+                                    <td id="totalLevel5">23</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    <!--Start of Table with tabs: Shows each level-->
+                    
+                     <div id="levelTableContainer">
+                            <div class="row mt-3">
+                                <div class="col-sm-12">
+                                    <h5 class="mb-1">Referrals by Level</h5>
+                                    <!--Tab Headers-->
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#level1-table" role="tab" aria-controls="level1">Level 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#level2-table" role="tab" aria-controls="level2">Level 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#level3-table" role="tab" aria-controls="level3">Level 3</a>
+                                        </li>
+                                         <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#level4-table" role="tab" aria-controls="no">Level 4</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#level5-table" role="tab" aria-controls="level5">Level 5</a>
+                                        </li>
+                                    </ul>
+                                    
+                                <!--Tab Content: Each Level has it's own table
+                                    -- Tables consist of all plan types - Enhanced and Pro referrals are included in the same table
+                                    -- Level 1 names are shown - the user's direct referrals
+                                    -- Other Levels have names with asterisks - for privacy
+                                    -- Paid users are indicated using a badge with a font awesome icon - money sign $ : class="fa fa-dollar"
+                                    -- 
+                                -->
+                                
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="level1-table" role="tabpanel">
+                                               <div class="row">
+                                               <div class="col-sm-12">
+
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Referred By</th>
+                                                    <th>Name</th>
+                                                    <th>Level</th>
+                                                    <th>Product Plan</th>
+                                                    <th>
+                                                       Free Trial / Paid
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Ned Ninja IV</td>
+                                                    <td>Greg Ninja</td>
+                                                    <td>1</td>
+                                                    <td>Enhanced</td>
+                                                    <td>Free Trial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ned Ninja IV</td>
+                                                    <td>Scruff McGruff</td>
+                                                    <td>1</td>
+                                                    <td>Enhanced</td>
+                                                    <td>
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span>
+                                                      Paid User
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ned Ninja IV</td>
+                                                    <td>Charles E. Cheese</td>
+                                                    <td>1</td>
+                                                    <td>Enhanced</td>
+                                                    <td>
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span>
+                                                      Paid User
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ned Ninja IV</td>
+                                                    <td>Bruce Wayne</td>
+                                                    <td>1</td>
+                                                    <td>Professional</td>
+                                                      <td>Free Trial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ned Ninja IV</td>
+                                                    <td>Bilbo Baggins</td>
+                                                    <td>1</td>
+                                                    <td>Professional</td>
+                                                    <td>Free Trial</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                                   </div>
+                                            </div>
+                                        </div>
+
+                                         <div class="tab-pane" id="level2-table" role="tabpanel">
+                                           <div class="row">
+                                               <div class="col-sm-12">
+                                            <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Referred By</th>
+                                                    <th>Name</th>
+                                                    <th>Level</th>
+                                                    <th>Product Plan</th>
+                                                    <th>Paid/Free Trial</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Greg Ninja</td>
+                                                    <td>Sandra *****</td>
+                                                    <td>2</td>
+                                                    <td>Enhanced</td>
+                                                    <td>Free Trial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Greg Ninja</td>
+                                                    <td>Chris *****</td>
+                                                    <td>2</td>
+                                                    <td>Enhanced</td>
+                                                      <td>  <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Greg Ninja</td>
+                                                    <td>Greg *****</td>
+                                                    <td>2</td>
+                                                    <td>Enhanced</td>
+                                                      <td>  <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bruce Wayne</td>
+                                                    <td>Amy *****</td>
+                                                    <td>2</td>
+                                                    <td>Enhanced</td>
+                                                      <td>Free Trial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bruce Wayne</td>
+                                                    <td>Clark *****</td>
+                                                    <td>2</td>
+                                                    <td>Professional</td>
+                                                      <td>Free Trial</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                               </div>
+                                           </div>
+                                        </div>
+
+                                         <div class="tab-pane" id="level3-table" role="tabpanel">
+                                           <div class="row">
+                                            <div class="col-sm-12">
+                                            <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Referred By</th>
+                                                    <th>Name</th>
+                                                    <th>Level</th>
+                                                    <th>Product Plan</th>
+                                                    <th>Paid/Free Trial</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>******</td>
+                                                    <td>******</td>
+                                                    <td>3</td>
+                                                    <td>Enhanced</td>
+                                                    <td>Free Trial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>******</td>
+                                                    <td>******</td>
+                                                    <td>3</td>
+                                                    <td>Enhanced</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>*******</td>
+                                                    <td>******</td>
+                                                    <td>3</td>
+                                                    <td>Enhanced</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>******</td>
+                                                    <td>******</td>
+                                                    <td>3</td>
+                                                    <td>Enhanced</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>******</td>
+                                                    <td>******</td>
+                                                    <td>3</td>
+                                                    <td>Enhanced</td>
+                                                      <td>Free Trial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>******</td>
+                                                    <td>******</td>
+                                                    <td>3</td>
+                                                    <td>Professional</td>
+                                                    <td>Free Trial</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                               </div>
+                                           </div>
+                                        </div>
+
+                                         <div class="tab-pane" id="level4-table" role="tabpanel">
+                                            <div class="row">
+                                            <div class="col-sm-12">
+                                            <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Referred By</th>
+                                                    <th>Name</th>
+                                                    <th>Level</th>
+                                                    <th>Product Plan</th>
+                                                    <th>Paid/Free Trial</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>******</td>
+                                                    <td>**********</td>
+                                                    <td>4</td>
+                                                    <td>Enhanced</td>
+                                                    <td>Free Trial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>*********</td>
+                                                    <td>******</td>
+                                                    <td>4</td>
+                                                    <td>Enhanced</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>******</td>
+                                                    <td>******</td>
+                                                    <td>4</td>
+                                                    <td>Enhanced</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>*********</td>
+                                                    <td>******</td>
+                                                    <td>4</td>
+                                                    <td>Enhanced</td>
+                                                      <td>Free Trial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>******</td>
+                                                    <td>******</td>
+                                                    <td>4</td>
+                                                    <td>Professional</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                               </div>
+                                           </div>
+                                        </div>
+
+                                         <div class="tab-pane" id="level5-table" role="tabpanel">
+                                            <div class="row">
+                                            <div class="col-sm-12">
+                                            <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Referred By</th>
+                                                    <th>Name</th>
+                                                    <th>Level</th>
+                                                    <th>Product Plan</th>
+                                                    <th>Paid/Free Trial</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>********</td>
+                                                    <td>**********</td>
+                                                    <td>5</td>
+                                                    <td>Enhanced</td>
+                                                    <td>Free Trial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>*********</td>
+                                                    <td>******</td>
+                                                    <td>5</td>
+                                                    <td>Enhanced</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>********</td>
+                                                    <td>****</td>
+                                                    <td>5</td>
+                                                    <td>Enhanced</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>********</td>
+                                                    <td>****</td>
+                                                    <td>5</td>
+                                                    <td>Enhanced</td>
+                                                      <td>Free Trial</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>********</td>
+                                                    <td>*******</td>
+                                                    <td>5</td>
+                                                    <td>Professional</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>******</td>
+                                                    <td>****</td>
+                                                    <td>5</td>
+                                                    <td>Professional</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                                          <tr>
+                                                    <td>*******</td>
+                                                    <td>****</td>
+                                                    <td>5</td>
+                                                    <td>Professional</td>
+                                                    <td>  
+                                                      <span class="badge badge-success"><i class="fa fa-dollar"></i></span> Paid User
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <!--End of Tab Content-->
+                        
+                        
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--/.col-->
+            <!--End of levelTableContainer-->
+            
+            
+            </div><!--/.col-->
+            </div><!--/.row-->
+         </div>
+     </div>
+  </div>    <!--/.col-->
 </div><!--/.row-->
 </div><!--/.animated-->
 </div><!--/.container-->
