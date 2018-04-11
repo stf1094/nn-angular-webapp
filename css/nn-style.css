@@ -14437,3 +14437,58 @@ base-chart.chart {
     top: 10px;
     float: right;
 }
+
+/*Onboarding Choose Plan type-------------------------------------*/
+.nn-plans {
+     list-style-type:none;
+     margin:25px 0 0 0;
+     padding:0;
+     display: flex;
+    flex-flow: row wrap;
+    
+     justify-content: space-around;
+}
+
+.nn-plans li {
+    /*float:left;*/
+    margin:0 5px 0 0;
+    position: relative;
+    
+}
+
+.plan-type {
+    flex-basis: 48%;
+}
+
+.nn-plans label, .donate-now input {
+    display:block;
+    /*position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;*/
+}
+
+.nn-plans input[type="radio"] {
+    opacity:0.011;
+    z-index:100;
+}
+
+.nn-plans input[type="radio"]:checked + label {
+    background: #e4e5e6;
+    
+}
+
+.nn-plans label {
+     padding: 35px;
+     border: 1px solid #CCC; 
+     border-radius: 4px;
+     cursor: pointer;
+     z-index: 90;
+     text-align: center;
+    height: 100px;
+}
+
+.nn-plans label:hover {
+     background:#EEE;
+}
