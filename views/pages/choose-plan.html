@@ -10,34 +10,41 @@
                 <div class="card mx-2">
                     <div class="card-block p-2">
                           <div class="float-right w-25">
-                           <span class="text-muted h5 font300">Step 2/4</span>
+                           <span class="text-muted h5 font300">Step 4/6</span>
                             <div class="progress progress-sm mt-h">
-                                <div class="progress-bar bg-success" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-success" style="width: 67%" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             </div>
-                             <h1 class="mt-2">Choose Plan</h1>
-                             <div class="form-group">    
-                                    <ul class="nn-plans">
-                                       <!--<li class="plan-type">
-                                        <input type="radio" id="basic" class="disabled" name="plan" />
-                                        <label for="basic" class="h4 disabled">Basic</label>
-                                        </li>-->
-                                         <li class="plan-type">
-                                        <input type="radio" id="enhanced" name="plan" />
-                                        <label class="h4" for="enhanced">Enhanced</label>
-                                        </li>
-                                         <li class="plan-type">
-                                        <input type="radio" id="professional" name="plan" />
-                                        <label class="h4" for="professional">Professional</label>
-                                        </li>
-                                         <!--<li class="plan-type">
-                                        <input type="radio" id="enterprise" name="plan" />
-                                        <label class="h4"  for="enterprise">Enterprise</label>
-                                        </li>-->
-                                    </ul>
-                             </div>
-                           <button class="btn btn-warning btn-block mt-2">Choose Plan</button> 
-                    </div>
+                             <h2 class="mt-2">Choose Plan</h2>
+                           <div class="form-group">    
+                                <ul class="checkbox-lg">
+                                    <li>
+                                       <input type="radio" id="enhanced60" name="plan" />
+                                       <label for="enhanced60">Enhanced: 60-day free trial</label>
+                                    </li>
+                                    <li>
+                                       <input type="radio" id="enhancedNo60" name="plan" />
+                                       <label for="enhancedNo60">Enhanced: Skip 60-day free trial</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-group mt-3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="agree" name="agree" value="agree">Agree to Terms and Conditions
+                                </label>
+                            </div>
+                            <a href="#" target="_blank" class="btn btn-link">Read terms and conditions</a>
+                            </div>
+                      </div>
+                     <div class="card-footer p-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <a ui-sref-active="active" ui-sref="app.pages.stripe-account"> 
+                                    <button type="button" class="btn btn-block btn-warning">Create Account</button></a>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>

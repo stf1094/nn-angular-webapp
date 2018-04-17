@@ -187,6 +187,84 @@ angular
       label: '{{ "Affiliate Stats" | translate }}'
     }
   })
+ .state('app.new-contact-2', {
+    url: '/new-contact-2',
+    templateUrl: 'views/new-contact-2.html',
+    ncyBreadcrumb: {
+      label: '{{ "New Contact-2" | translate }}'
+    }
+  })
+.state('app.early-adopter', {
+   url: '/early-adopter',
+   templateUrl: 'views/early-adopter.html',
+   ncyBreadcrumb: {
+    label: '{{ "Early Adopter" | translate }}'
+    }
+ })
+.state('app.affiliate-table', {
+   url: '/affiliate-table',
+   templateUrl: 'views/affiliate-table.html',
+   ncyBreadcrumb: {
+    label: '{{ "Affiliate Table" | translate }}'
+    }
+ })
+.state('app.biz-card-create', {
+   url: '/biz-card-create',
+   templateUrl: 'views/biz-card-create.html',
+   ncyBreadcrumb: {
+    label: '{{ "Create A Digital Business Card" | translate }}'
+    }
+ })
+.state('app.pages', {
+    url: "/pages",
+    abstract: true,
+    template: '<ui-view></ui-view>',
+    ncyBreadcrumb: {
+      label: 'Pages'
+    }
+  })
+.state('app.pages.stripe-account', {
+   url: '/stripe-account',
+   templateUrl: 'views/pages/stripe-account.html',
+   ncyBreadcrumb: {
+    label: '{{ "Create or Connect a Stripe Account" | translate }}'
+    }
+ })
+    .state('app.pages.stripe-payment', {
+   url: '/stripe-payment',
+   templateUrl: 'views/pages/stripe-payment.html',
+   ncyBreadcrumb: {
+    label: '{{ "Enter Payment Info" | translate }}'
+    }
+ })
+    .state('app.pages.user-info', {
+   url: '/user-info',
+   templateUrl: 'views/pages/user-info.html',
+   ncyBreadcrumb: {
+    label: '{{ "Enter Billing Address Info" | translate }}'
+    }
+ })
+    .state('app.pages.choose-plan', {
+   url: '/choose-plan',
+   templateUrl: 'views/pages/choose-plan.html',
+   ncyBreadcrumb: {
+    label: '{{ "Choose Your Plan" | translate }}'
+    }
+ })
+    .state('app.pages.register', {
+   url: '/register',
+   templateUrl: 'views/pages/register.html',
+   ncyBreadcrumb: {
+    label: '{{ "Register for Network Ninjas" | translate }}'
+    }
+ })
+  .state('app.pages.congrats', {
+   url: '/congrats',
+   templateUrl: 'views/pages/congrats.html',
+   ncyBreadcrumb: {
+    label: '{{ "Welcome to Network Ninjas" | translate }}'
+    }
+ })
   .state('app.components', {
     url: "/components",
     abstract: true,

@@ -1,0 +1,236 @@
+.bot-text {
+    color: #ebe8f6;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+/* ============ LABEL =========== */
+
+.floating-label-form label {
+    color: #cfd7df;
+    font-size: 13px;
+    font-weight: 400;
+    transition: all .3s cubic-bezier(.64, .09, .08, 1);
+    margin: 30px 0 30px;
+    display: inline-block
+}
+
+.floating-label-form .floating-label {
+    -webkit-transform: translateY(-18px);
+    transform: translateY(-18px);
+    position: absolute
+}
+
+.floating-label-form .label-active {
+    -webkit-transform: translateY(-38px);
+    transform: translateY(-38px);
+    font-size: 12px;
+    color: #f7941d;
+    
+}
+
+.floating-label-form .label-required:before {
+    content: '*';
+    color: #f2aa5c;
+    position: absolute;
+    margin-left: -10px
+}
+
+
+/* ============ INPUT =========== */
+
+.floating-label-form input[type=email],
+.floating-label-form input[type=text],
+.floating-label-form input[type=datepicker],
+.floating-label-form input[type=password],
+.floating-label-form input[type=number] {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 10px 0;
+    border-bottom: solid 1px #cfd7df;
+    will-change: background-position;
+    transition: all .3s cubic-bezier(.64, .09, .08, 1);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #f2aa5c 96%);
+    background-position: -1920px 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #333;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.floating-label-form textarea {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 10px 0;
+    border-bottom: solid 1px #cfd7df;
+    will-change: background-position;
+    transition: all .3s cubic-bezier(.64, .09, .08, 1);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 98%, #f2aa5c 98%);
+    background-position: -1920px 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #333;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.floating-label-form input[type=email].input-active,
+.floating-label-form input[type=email]:focus,
+.floating-label-form input[type=text].input-active,
+.floating-label-form input[type=text]:focus,
+.floating-label-form input[type=datepicker].input-active,
+.floating-label-form input[type=datepicker]:focus,
+.floating-label-form textarea.input-active,
+.floating-label-form textarea:focus,
+.floating-label-form input[type=password].input-active,
+.floating-label-form input[type=password]:focus,
+.floating-label-form input[type=number].input-active,
+.floating-label-form input[type=number]:focus {
+    background-position: 0 0;
+    box-shadow: none;
+    outline: 0;
+}
+
+.floating-label-form input[type=email].input-active,
+.floating-label-form input[type=email]:focus:after,
+.floating-label-form input[type=text].input-active,
+.floating-label-form input[type=text]:focus:after,
+.floating-label-form input[type=datepicker].input-active,
+.floating-label-form input[type=datepicker]:focus:after,
+.floating-label-form textarea.input-active,
+.floating-label-form textarea:focus:after,
+.floating-label-form input[type=password].input-active,
+.floating-label-form input[type=password]:focus:after,
+.floating-label-form input[type=number].input-active,
+.floating-label-form input[type=number]:focus:after {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 10px 0;
+    border-bottom: solid 1px #cfd7df;
+    will-change: background-position;
+    transition: all .3s cubic-bezier(.64, .09, .08, 1);
+    background: linear-gradient(to bottom, rgba(249, 249, 249, 0) 96%, #9B9B9B 96%);
+    background-position: -1920px 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.floating-label-form input[type=email]::-webkit-input-placeholder,
+.floating-label-form input[type=text]::-webkit-input-placeholder,
+.floating-label-form input[type=datepicker]::-webkit-input-placeholder,
+.floating-label-form textarea::-webkit-input-placeholder,
+.floating-label-form input[type=password]::-webkit-input-placeholder,
+.floating-label-form input[type=number]::-webkit-input-placeholder {
+    transition: all .2s cubic-bezier(.64, .09, .08, 1);
+}
+
+.floating-label-form input[type=radio]:after,
+.floating-label-form input[type=radio]:before {
+    content: '';
+    position: absolute;
+    transition: all .3s cubic-bezier(.64, .09, .08, 1)
+}
+
+.floating-label-form input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    top: -2px;
+    margin-left: -1px;
+    margin: 5px 12px 5px 0px;
+}
+
+.floating-label-form input[type=checkbox]:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 1px solid #9b9b9b;
+    border-radius: 3px;
+    background: #f9f9f9;
+    position: absolute;
+    top: -2px;
+    margin-left: -1px;
+}
+
+.floating-label-form input[type=checkbox]:after {
+    content: '✓';
+    color: #fff;
+    background: #f2aa5c;
+    position: absolute;
+    top: -2px;
+    margin-left: -1px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #f2aa5c;
+    border-radius: 3px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s cubic-bezier(.64, .09, .08, 1);
+    will-change: opacity
+}
+
+.floating-label-forminput[type=checkbox]:checked:after {
+    opacity: 1
+}
+
+.floating-label-form input[type=radio] {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.floating-label-form input[type=radio]:before {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #f2aa5c;
+    display: inline-block;
+    top: -5px;
+    left: -8px;
+    background-image: radial-gradient(circle, #f2aa5c 60%, #fff 70%);
+    background-size: 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    will-change: background-size;
+    z-index: 2
+}
+
+.floating-label-form input[type=radio]:after {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%
+}
+
+.floating-label-form input[type=radio]:checked:before {
+    background-size: 14px 14px
+}
