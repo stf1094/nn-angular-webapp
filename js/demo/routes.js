@@ -237,9 +237,9 @@ angular
     label: '{{ "Enter Payment Info" | translate }}'
     }
  })
-    .state('app.pages.user-info', {
-   url: '/user-info',
-   templateUrl: 'views/pages/user-info.html',
+    .state('app.pages.billing-address', {
+   url: '/billing-address',
+   templateUrl: 'views/pages/billing-address.html',
    ncyBreadcrumb: {
     label: '{{ "Enter Billing Address Info" | translate }}'
     }
