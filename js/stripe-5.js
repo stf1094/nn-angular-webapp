@@ -35,7 +35,36 @@ var stripe = Stripe('pk_test_dzT3B5BUYZHcRHCdKatIAEmB');
     },
   };
     
-    //Creating each card element
+    
+  /**
+   * Card Element
+   */
+  var card = elements.create("card", {
+    iconStyle: "solid",
+    style: {
+      base: {
+        iconColor: "#f7941d",
+        color: "#333",
+        fontWeight: 400,
+        fontSize: "15px",
+        fontSmoothing: "antialiased",
+
+        "::placeholder": {
+          color: "#999"
+        },
+        ":-webkit-autofill": {
+          color: "#fce883"
+        }
+      },
+      invalid: {
+        iconColor: "#E25950",
+        color: "#E25950"
+      }
+    }
+  });
+  card.mount("#example5-card"); 
+    
+/*Creating each card element individually
   var cardNumber = elements.create('cardNumber', {
       style: elementStyles,
   });
@@ -57,7 +86,7 @@ var stripe = Stripe('pk_test_dzT3B5BUYZHcRHCdKatIAEmB');
   postalCode.mount('#example5-zip'); 
 
 
-  registerElements([cardNumber, cardExpiry, cardCvc, postalCode], "example5");
+  registerElements([cardNumber, cardExpiry, cardCvc, postalCode], "example5"); */
 
 
     
@@ -65,7 +94,7 @@ var form = document.getElementById('payment-form');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  stripe.createToken(cardNumber).then(function(result) {
+  stripe.createToken(card).then(function(result) {
     if (result.error) {
       // Inform the user if there was an error.
       var errorElement = document.getElementById('card-errors');

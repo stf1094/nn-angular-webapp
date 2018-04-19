@@ -1,64 +1,130 @@
-<div>
+<div class="app flex-row align-items-center">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="mb-1 mt-3">
-                <img width="225px" src="/img/networkninjas-logo-black.png"/>
+            <div class="mb-1">
+               <img width="225px" src="https://s3.amazonaws.com/thenetworkninjas.biz/img/networkninjas-logo-black.png"/>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" ng-controller="newRefLinkCtrl">
             <div class="col-lg-6 col-md-8 col-sm-12">
                 <div class="card mx-2">
                     <div class="card-block p-2">
-                        <div class="float-right w-25">
-                           <span class="text-muted h5 font300">Step 1/6</span>
-                            <div class="progress progress-sm mt-h">
-                                <div class="progress-bar bg-success" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <h2 class="mt-2">Register</h2>
+                        <h1>Register</h1>
                         <p class="text-muted">Create your account</p>
-                        <div class="input-group mb-1">
-                            <span class="input-group-addon"><i class="icon-user"></i>
+                            <div class="input-group my-1">
+                            <span class="input-group-addon"><i class="fa fa-user"></i>
                             </span>
-                            <input type="text" class="form-control" placeholder="First Name">
+                            <input type="text" id="txtFirstName"  class="form-control"  ng-model="txtFirstName" name="txtFirstName" id="txtFirstName" placeholder="First Name">
                         </div>
                             <div class="input-group mb-1">
-                            <span class="input-group-addon"><i class="icon-user"></i>
+                            <span class="input-group-addon"><i class="fa fa-user"></i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Last Name">
+                            <input type="text" id="txtLastName" class="form-control" ng-model="txtLastName" name="txtLastName" id="txtLastName" placeholder="Last Name">
                         </div>
 
                         <div class="input-group mb-1">
                             <span class="input-group-addon">@</span>
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" id="txtPreferredEmail" class="form-control"  ng-model="txtPreferredEmail" name="txtPreferredEmail" id="txtPreferredEmail"  placeholder="Email">
                         </div>
                         
                         <div class="input-group mb-1">
                             <span class="input-group-addon">@</span>
-                            <input type="text" class="form-control" placeholder="Confirm Email">
+                            <input type="text" id="txtConfirmEmail" class="form-control" ng-model="txtConfirmEmail" name="txtConfirmEmail" id="txtConfirmEmail"   placeholder="Confirm Email">
                         </div>
-
-                        <div class="input-group mb-1">
-                            <span class="input-group-addon"><i class="icon-lock"></i>
+                        
+           							<div class="input-group mb-1">
+                            <span class="input-group-addon"><i class="fa fa-flag"></i>
                             </span>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <ui-select class="form-control" ng-model="country.selected" theme="bootstrap" ng-blur="getCountrCode(country.code,country.uimask,country.uiformat)" >
+                                        <ui-select-match  placeholder="Select or search a country in the list...">{{$select.selected.name}}</ui-select-match>
+                                        <ui-select-choices repeat="country in countries | filter: $select.search">
+                                            <span ng-bind-html="country.name | highlight: $select.search"  ng-click="getCountrCode(country.code,country.uimask,country.uiformat)"></span>
+                                            <small ng-bind-html="country.code | highlight: $select.search" ng-click="getCountrCode(country.code,country.uimask,country.uiformat)" ></small>
+                                        </ui-select-choices>
+                            </ui-select>
+                         
+                        </div>
+                        <div class="input-group mb-1">
+                            <span class="input-group-addon">#</span>
+                            <input  id="phone" type="phonenumber" class="form-control"  placeholder="{{uiformat}}" class="form-control" ng-model="phone"  name="phone" ui-mask="{{phoneUIMask}}">
+                        </div>
+                        <div class="input-group mb-1">
+                            <span class="input-group-addon"><i class="fa fa-lock"></i>
+                            </span>
+                            <input  type="password" class="form-control" ng-model="pw" name="pw" id="pw" placeholder="Password">
                         </div>
                         <div class="input-group mb-2">
-                            <span class="input-group-addon"><i class="icon-lock"></i>
+                            <span class="input-group-addon"><i class="fa fa-lock"></i>
                             </span>
-                            <input type="password" class="form-control" placeholder="Confirm password">
+                            <input type="password" class="form-control" ng-model="txtNewPW2" name="txtNewPW2" id="txtNewPW2" placeholder="Repeat password">
                         </div>
-                    </div>
-                      <div class="card-footer p-2">
+                        <div class="row" id="pwStrengthContainer">
+                                <div class="col-sm-12">
+                                    <h6>Password Strength: <span id="pwStrength" class="font300"><ul id="strength" check-strength="pw"></ul> </span></h6>
+     							    <label id="lblValidate" class="ml-1"  color="red" for="validation"><font id="fontValidation" color="red">{{validationMessage}}</font> </label> 
+                                </div>        
+				         </div>
+
                         <div class="row">
-                            <div class="col-12">
-                                <a ui-sref-active="active" ui-sref="app.pages.billing-address"> <button type="button" class="btn btn-block btn-warning">Continue</button></a>
+                                 <div class="col-sm-6">
+                                      <div class="form-group">
+                                          <label for="email">Referred by</label>
+                                           <div  ng-bind-html="referredByName | highlight: referredByName"></div>
+                                                    <small >
+                                                        Contact information: 
+                                                    </small>
+                                                    <br />
+                                                    <small >
+                                                         {{referredByEmail}}
+                                                    </small>
+                                                    <br />
+                                                    <small >
+                                                         {{referredByPhone}}
+                                                    </small>
+
+                                         <!-- 
+                                            <ui-select multiple ng-model="multipleDemo.selectedPeople" theme="select2" ng-disabled="disabled">
+                                                <ui-select-match id="referredBySelected" placeholder="Who referred you?">{{$item.name}} &lt;{{$item.email}}&gt;</ui-select-match>
+                                                <ui-select-choices  repeat="person in people | propsFilter: {name: $select.search, age: $select.search}">
+                                                    <div  ng-bind-html="person.name | highlight: $select.search"  ng-click="getReferralData(person.downlineCustomerEntityIID, person.downlineEntityIID)"></div>
+                                                    <small ng-click="getReferralData(person.rootCustomerEntityIID, person.entityIID)">
+                                                        email: {{person.email}}
+                                                    </small>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                         -->
+                                    </div>
+                                 </div>
+                               </div>
+                                   
+                    </div>
+                           <div class="card-footer">
+                                   <!--Button "continue" leads to payments page-->
+                                   <button type="button" class="btn btn-block btn-warning my-1" ng-click="saveAfilliate()">Continue</button> <!-- ng-click="continueToPayment() -->  
+                              </div>  
+											  
+											  
+											  
+                    
+                    </div>
+                <!--Potential to sign in with Facebook, Google etc.-->
+                  <!--  <div class="card-footer p-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn btn-block btn-facebook" type="button">
+                                    <span>facebook</span>
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-block btn-twitter" type="button">
+                                    <span>twitter</span>
+                                </button>
                             </div>
                         </div>
-                    </div> 
+                    </div> -->
                 </div>
             </div>
         </div>
-    </div>
 </div>
+
 

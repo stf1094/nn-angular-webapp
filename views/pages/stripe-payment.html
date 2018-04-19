@@ -22,17 +22,16 @@
                         <!--Stripe form with Stripe Styling
                             - the 'example' 'example5' classes are from the stripe stylesheet,js: stripe-5.css and stripe-5.js
                            
-                        -->
+                        
                         
                         <div class="example example5">
                         <form action="/createCard" method="post" id="payment-form">
                             <div class="row mt-2">
                               <div class="field">
                                 <label for="example5-card-number" data-tid="elements_examples.form.card_label">Card Number</label>
-                                <input id="example5-card-number" class="input">
+                                  <div id="example5-card-number" class="input"></div>
                               </div>
                             </div>
-
                             <div class="row my-2">
                               <div class="field quarter-width">
                                 <label for="example5-card-expiry" data-tid="elements_examples.form.card_expiry_label">Exp</label>
@@ -47,10 +46,10 @@
                                 <div id="example5-zip" class="input"></div>
                               </div>
                             </div>
-
-                            <button type="submit" class="mt-3" data-tid="elements_examples.form.pay_button">Submit</button>
+                             <a ui-sref-active="active" ui-sref="app.pages.choose-plan"> 
+                                 <button class="mt-3">Submit</button></a>
                             
-                         <!--Used to display form errors-->
+                         <!--Used to display form errors
                           <div class="error mt-1" role="alert">
                           <span class="message"></span></div>
                           
@@ -58,10 +57,35 @@
                       </div>
                       <!--End Stripe Form-->
                       
+                      <div class="example example5">
+                        <form action="/createCard" method="post" id="payment-form">
+                         <!-- <div id="example5-paymentRequest">
+                            <!--Stripe paymentRequestButton Element inserted here
+                          </div> -->
+
+                            <div class="row mt-2">
+                              <div class="field">
+                                <label for="example5-card" data-tid="elements_examples.form.card_label">Card</label>
+                                <div id="example5-card" class="input"></div>
+                              </div>
+                            </div>
+                            <button type="submit" class="mt-3" data-tid="elements_examples.form.pay_button">Submit</button>
+
+                          <div class="error mt-1" role="alert">
+                          <span class="message"></span></div>
+                        </form>
+                      </div> 
+                      
+                      
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+  <!-- Simple localization script for Stripe's examples page. -->
+  <script src="js/l10n.js" data-rel-js></script>
+    <!-- Stripe -->
+  <script src="js/stripe-5.js" data-rel-js></script>
 
