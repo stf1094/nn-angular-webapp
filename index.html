@@ -19,10 +19,17 @@
     <link rel="shortcut icon" href="img/favicon.png">
 
     <title>The Network Ninjas</title>
-
+    
+    <!--Stripe-->
+     <script src="https://js.stripe.com/v3/"></script>
+     
     <!-- Main styles for this application -->
+    <link href="css/stripe-5.css" rel="stylesheet">
+    <link href="css/stripe-base.css" rel="stylesheet">
+    
     <link href="css/nn-style.css" rel="stylesheet">
     <link href="css/jquery.treegrid.css" rel="stylesheet">
+    <link href="css/pricing-slider.css" rel="stylesheet">
 
 </head>
 
@@ -246,31 +253,30 @@
                             </div>
                             <div class="modal-body">
                             <div class="col-sm-12">
-                            <div class="card">
-                                <div class="card-block">
-                                        <div class="form-group row">
-                                            <label class="col-md-3 form-control-label">Method</label>
-                                            <div class="col-md-9">
-                                                <div class="radio">
-                                                    <label for="radio1">
-                                                        <input type="radio" id="radio1" name="radios" value="option1">555-555-5555
-                                                    </label>
-                                                </div>
-                                                <div class="radio">
-                                                    <label for="radio2">
-                                                        <input type="radio" id="radio2" name="radios" value="option2">email1@email.com
-                                                    </label>
-                                                </div>
-                                                 <div class="radio">
-                                                    <label for="radio3">
-                                                        <input type="radio" id="radio3" name="radios" value="option3">email2@email.com
-                                                    </label>
+                                <div class="card">
+                                    <div class="card-block">
+                                            <div class="form-group row">
+                                                <label class="col-md-3 form-control-label">Method</label>
+                                                <div class="col-md-9">
+                                                    <div class="radio">
+                                                        <label for="radio1">
+                                                            <input type="radio" id="radio1" name="radios" value="option1">555-555-5555
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label for="radio2">
+                                                            <input type="radio" id="radio2" name="radios" value="option2">email1@email.com
+                                                        </label>
+                                                    </div>
+                                                     <div class="radio">
+                                                        <label for="radio3">
+                                                            <input type="radio" id="radio3" name="radios" value="option3">email2@email.com
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-
                         </div>
                             </div>
                             <div class="modal-footer">
@@ -741,9 +747,14 @@
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/tether.min.js"></script>
     <script src="js/libs/bootstrap.min.js"></script>
+    
+    <!-- Stripe -->
+    <script src="js/stripe-index.js"></script>
+    <script src="js/stripe-5.js"></script>
 
     <!-- AngularJS -->
     <script src="js/libs/angular.min.js"></script>
+    
 
     <!-- AngularJS plugins -->
     <script src="js/libs/angular-animate.min.js"></script>
@@ -753,7 +764,7 @@
     <script src="js/libs/angular-translate.min.js"></script>
     <script src="js/libs/angular-breadcrumb.min.js"></script>
     <script src="js/libs/loading-bar.min.js"></script>
-
+    
     <!-- AngularJS Leaf App scripts -->
 
     <script src="js/app.js"></script>
@@ -775,6 +786,7 @@
     <script src="js/libs/fullcalendar.min.js"></script>
     <script src="js/libs/gcal.min.js"></script>
     <script src="js/libs/jquery.treegrid.min.js"></script>
+ 
     <!--
     <script src="js/views/main.js"></script>
     <script src="js/views/advanced-forms.js"></script>

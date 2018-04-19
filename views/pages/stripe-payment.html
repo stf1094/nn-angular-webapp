@@ -10,58 +10,54 @@
                 <div class="card mx-2">
                     <div class="card-block p-2">
                           <div class="float-right w-25">
-                           <span class="text-muted h5 font300">Step 3/6</span>
+                           <span class="text-muted h5 font300">Step 3/5</span>
                             <div class="progress progress-sm mt-h">
-                                <div class="progress-bar bg-success" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                               
+                                <div class="progress-bar bg-success" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             </div>
-                        <h2 class="mt-2">Payment Info</h2>
-                        <p class="text-muted">Your card will not be charged until your 60 day trial is complete. If you decide to cancel your trial before 60 days, your card will not be charged.</p>
-    
-                          
-                          <!--Start of stripe form-->
-                           <div class="example example2">
-                            <form action="/createCard" method="post" id="payment-form">
-                              <div class="form-row">
-                                <div id="card-element">
-                                  <!-- A Stripe Element will be inserted here.--> 
-                                      <div class="row mt-2">
-                                        <div class="field">
-                                          <div id="example2-card-number" class="input empty"></div>
-                                          <label for="example2-card-number" data-tid="elements_examples.form.card_number_label">Card number</label>
-                                          <div class="baseline"></div>
-                                        </div>
-                                      </div>
-                                      <div class="row mt-2">
-                                        <div class="field quarter-width">
-                                          <div id="example2-card-expiry" class="input empty"></div>
-                                          <label for="example2-card-expiry" data-tid="elements_examples.form.card_expiry_label">Expiration</label>
-                                          <div class="baseline"></div>
-                                        </div>
-                                        <div class="field quarter-width">
-                                          <div id="example2-card-cvc" class="input empty"></div>
-                                          <label for="example2-card-cvc" data-tid="elements_examples.form.card_cvc_label">CVC</label>
-                                          <div class="baseline"></div>
-                                        </div>
-                                        <div class="field quarter-width">
-                                            <div id="example2-zip" data-tid="elements_examples.form.postal_code_placeholder" class="input empty" type="text" placeholder="94107" required=""></div>
-                                            <label for="example2-zip" data-tid="elements_examples.form.postal_code_label">ZIP</label>
-                                            <div class="baseline"></div>
-                                          </div>
-                                       </div>
-                                  </div>
-                                <!-- Used to display form errors. -->
-                                <div id="card-errors" role="alert"></div>
+                        <h1 class="mt-2">Payment Info</h1>
+                        <p class="text-muted">Your card will not be charged until your 60 day trial is complete, unless you choose to bypass the free trial. If you decide to cancel your free trial before 60 days, your card will not be charged.</p>
+                            
+                        <!--Stripe form with Stripe Styling
+                            - the 'example' 'example5' classes are from the stripe stylesheet,js: stripe-5.css and stripe-5.js
+                           
+                        -->
+                        
+                        <div class="example example5">
+                        <form action="/createCard" method="post" id="payment-form">
+                            <div class="row mt-2">
+                              <div class="field">
+                                <label for="example5-card-number" data-tid="elements_examples.form.card_label">Card Number</label>
+                                <input id="example5-card-number" class="input">
                               </div>
-                              
-                              <!--Button used to route to stripe, or to the next NN page-->
-                              <a ui-sref-active="active" ui-sref="app.pages.choose-plan">
-                                <button>Continue</button> </a>
-                                  
-                              <div class="error" role="alert">
-                              <span class="message"></span></div>
-                            </form>
-                        </div>   
+                            </div>
+
+                            <div class="row my-2">
+                              <div class="field quarter-width">
+                                <label for="example5-card-expiry" data-tid="elements_examples.form.card_expiry_label">Exp</label>
+                                <div id="example5-card-expiry" class="input"></div>
+                              </div>
+                              <div class="field quarter-width">
+                                <label for="example5-card-cvc" data-tid="elements_examples.form.cvc_label">CVC</label>
+                                <div id="example5-card-cvc" class="input"></div>
+                              </div>
+                              <div class="field quarter-width">
+                                <label for="example5-zip" data-tid="elements_examples.form.postal_code_label">ZIP</label>
+                                <div id="example5-zip" class="input"></div>
+                              </div>
+                            </div>
+
+                            <button type="submit" class="mt-3" data-tid="elements_examples.form.pay_button">Submit</button>
+                            
+                         <!--Used to display form errors-->
+                          <div class="error mt-1" role="alert">
+                          <span class="message"></span></div>
+                          
+                        </form>
+                      </div>
+                      <!--End Stripe Form-->
+                      
                     </div>
                 </div>
             </div>
