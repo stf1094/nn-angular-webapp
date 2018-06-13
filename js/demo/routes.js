@@ -215,6 +215,27 @@ angular
     label: '{{ "Create A Digital Business Card" | translate }}'
     }
  })
+.state('app.zoom', {
+   url: '/zoom',
+   templateUrl: 'views/zoom.html',
+   ncyBreadcrumb: {
+    label: '{{ "Zoom Meetings" | translate }}'
+    }
+ })
+.state('app.zoom-create', {
+   url: '/zoom-create',
+   templateUrl: 'views/zoom-create.html',
+   ncyBreadcrumb: {
+    label: '{{ "Create A Zoom Meeting" | translate }}'
+    }
+ })
+.state('app.zoom-invite', {
+   url: '/zoom-invite',
+   templateUrl: 'views/zoom-invite.html',
+   ncyBreadcrumb: {
+    label: '{{ "Invite Participants to Zoom Meeting" | translate }}'
+    }
+ })
 .state('app.pages', {
     url: "/pages",
     abstract: true,

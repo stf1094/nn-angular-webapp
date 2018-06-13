@@ -1,82 +1,141 @@
 <div class="container-fluid mt-2">
     <div class="animated fadeIn">
-        <div class="row">
-                    <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <i class=""></i> Zoom
-                                </div>
-                                <div class="card-block">
-                                    <table id="zoomTable" class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Date / Time</th>
-                                                <th>Attendees</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="zoomRow">
-                                                <td>1</td>
-                                                <td>2012/01/01</td>
-                                                <td>Member</td>
-                                                <td>
-                                                    <span class="badge badge-success">Active</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="zoomRow">
-                                                <td>2</td>
-                                                <td>2012/02/01</td>
-                                                <td>Staff</td>
-                                                <td>
-                                                    <span class="badge badge-danger">Banned</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="zoomRow">
-                                                <td>3</td>
-                                                <td>2012/02/01</td>
-                                                <td>Admin</td>
-                                                <td>
-                                                    <span class="badge badge-default">Inactive</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="zoomRow">
-                                                <td>4</td>
-                                                <td>2012/03/01</td>
-                                                <td>Member</td>
-                                                <td>
-                                                    <span class="badge badge-warning">Pending</span>
-                                                </td>
-                                            </tr>
-                                            <tr class="zoomRow">
-                                                <td>5</td>
-                                                <td>2012/01/21</td>
-                                                <td>Staff</td>
-                                                <td>
-                                                    <span class="badge badge-success">Active</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="#">Prev</a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="#">1</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">4</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">Next</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+       <div class="row">
+           <div class="col-md-8 push-2">
+                   <a ui-sref-active="active" ui-sref="app.zoom-create" class="btn btn-lg btn-info float-right mt-3">Create Zoom Meeting</a>
+                     <h1 class="mt-3">Zoom Video</h1>
+                     <hr class="mt-2">
+                    <div class="card">
+                       <div class="card-header">
+                           <i class="fa fa-calendar"></i> Schedule
+                       </div>
+                        <div class="card-block">
+                            <table id="zoomScheduleTable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Meeting ID</th>
+                                        <th>Topic</th>
+                                        <th>Date / Time</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="zoomRow">
+                                       <td>1</td>
+                                        <td>Septembers Big Meeting</td>
+                                        <td>2018/09/01, 9:00 AM EST</td>
+                                       <td>
+                                        <div class="dropdown display-inline">
+                                          <button type="button" class="btn btn-secondary dropdown-toggle ml-h edit-thread" data-toggle="dropdown">
+                                            <i class="fa fa-ellipsis-h"></i>
+                                          </button>
+                                          <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-edit"></i>Edit Details</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-users"></i>Add Contacts</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-trash"></i>Delete Meeting</a>
+                                          </div>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="zoomRow">
+                                         <td>2</td>
+                                        <td>Ned's Training</td>
+                                        <td>2018/09/02, 3:00 PM EST</td>
+                                        <td>
+                                        <div class="dropdown display-inline">
+                                          <button type="button" class="btn btn-secondary dropdown-toggle ml-h edit-thread" data-toggle="dropdown">
+                                            <i class="fa fa-ellipsis-h"></i>
+                                          </button>
+                                          <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-info-circle text-info"></i>Go to Profile</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-refresh text-warning"></i>Set Follow Up</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-check-circle text-success"></i>Move to Yes</a>
+                                              <a class="dropdown-item" href="#"><i class="fa fa-times-circle text-danger"></i>Move to No</a>
+                                          </div>
+                                        </div>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr class="zoomRow">
+                                         <td>3</td>
+                                        <td>Weekly Biz Call</td>
+                                        <td>2018/09/04, 3:00 PM EST</td>
+                                  <td>
+                                        <div class="dropdown display-inline">
+                                          <button type="button" class="btn btn-secondary dropdown-toggle ml-h edit-thread" data-toggle="dropdown">
+                                            <i class="fa fa-ellipsis-h"></i>
+                                          </button>
+                                          <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-info-circle text-info"></i>Go to Profile</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-refresh text-warning"></i>Set Follow Up</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-check-circle text-success"></i>Move to Yes</a>
+                                              <a class="dropdown-item" href="#"><i class="fa fa-times-circle text-danger"></i>Move to No</a>
+                                          </div>
+                                        </div>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr class="zoomRow">
+                                         <td>4</td>
+                                        <td>October's Big Call</td>
+                                        <td>2018/10/01, 9:00 AM EST</td>
+                                 <td>
+                                        <div class="dropdown display-inline">
+                                          <button type="button" class="btn btn-secondary dropdown-toggle ml-h edit-thread" data-toggle="dropdown">
+                                            <i class="fa fa-ellipsis-h"></i>
+                                          </button>
+                                          <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-info-circle text-info"></i>Go to Profile</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-refresh text-warning"></i>Set Follow Up</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-check-circle text-success"></i>Move to Yes</a>
+                                              <a class="dropdown-item" href="#"><i class="fa fa-times-circle text-danger"></i>Move to No</a>
+                                          </div>
+                                        </div>
+
+                                        </td>
+
+                                    </tr>
+                                    <tr class="zoomRow">
+                                         <td>5</td>
+                                        <td>November Event Prep</td>
+                                        <td>2018/10/02, 3:00 PM EST</td>
+                                   <td>
+                                        <div class="dropdown display-inline">
+                                          <button type="button" class="btn btn-secondary dropdown-toggle ml-h edit-thread" data-toggle="dropdown">
+                                            <i class="fa fa-ellipsis-h"></i>
+                                          </button>
+                                          <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-info-circle text-info"></i>Go to Profile</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-refresh text-warning"></i>Set Follow Up</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-check-circle text-success"></i>Move to Yes</a>
+                                              <a class="dropdown-item" href="#"><i class="fa fa-times-circle text-danger"></i>Move to No</a>
+                                          </div>
+                                        </div>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Prev</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">4</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
                         </div>
-                   </div>
+                    </div>
+                </div>
             </div>
+    </div>
 </div>

@@ -1,18 +1,39 @@
- <div class="container-fluid mt-2">
-    <div class="animated fadeIn">                      
-            <!--Create-Zoom Meeting-->
+    <div class="container-fluid mt-2">
+                <div class="animated fadeIn">
+                   
+                                          
+                                      
+            <!--Create-2-->
             <div class="row">
-                 <div class="col-md-12">
-                      <div class="card">
-                            <div class="card-block">
-                                <div class="row">
-                                    <h1 class="ml-1">Create a Zoom Meeting</h1>
+                        <div class="col-md-10 push-1">
+                               <button class="btn btn-lg btn-info float-right mt-3">Next</button>
+                                <button class="btn btn-lg btn-secondary float-right mt-3 mr-h">Cancel</button>
+                                 <h1 class="mt-3">Create a Zoom Meeting</h1>
+                                 <hr class="mt-2">
+                            <div class="row">
+                              
+                               <!--Start of left side main card-->
+                            <div class="col-md-8">
                                     
-                                </div>
-                                <hr>
+                            
+                            <div class="card">
+                               <div class="card-header">
+                                   Details
+                               </div>
+                                <div class="card-block">
+                          <!--Meeting ID 
+                               - auto-generated ID filled in to <span> -->
+                               
                                 <div class="row">
-                                    <div class="col-sm-5">
-                                         <h6 class="mt-2 mb-1">Meeting Topic</h6>
+                                    <div class="col-md-12">
+                                        <h6 class="my-1">Meeting ID: <span id="meetingID" class="h6">12345678</span></h6>
+                                    </div>
+                                </div>
+                                
+                               <!--Meeting Topic-->
+                                <div class="row">
+                                        <div class="col-lg-12 col-xl-10">
+                                        <h6 class="my-1">Meeting Topic</h6>
                                         <div class="form-group">
                                              <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-star"></i>
@@ -20,19 +41,48 @@
                                                 <input type="text" id="" name="" class="form-control" placeholder="Topic">
                                              </div>
                                         </div>
+                                        </div>
                                     </div>
-
-                                    <!--Time Zone: Ideally this would automatically be filled with their timezone, 
-                                        assuming they set that up in their account settings-->
-
-                                    <div class="col-sm-5">
-                                        <h6 class="mt-2 mb-1">Set the timezone</h6>
+                                    
+                                <!--Meeting Type-->
+                                <div class="row">
+                                        <div class="col-lg-12">
+                                        <h6 class="my-1">Meeting Type</h6>
+                                            <div class="form-group">
+                                                <label class="radio-inline mr-2" for="scheduledMeeting">
+                                                    <input type="radio" class="mr-q scheduledMeetingCheckbox" id="scheduledMeetingCheckbox" name="meeting-type" checked="" value="Scheduled">Scheduled
+                                                </label>
+                                                <label class="radio-inline mr-h" for="instantMeeting">
+                                                    <input type="radio" class="mr-q instantMeetingCheckbox" id="instantMeeting" name="meeting-type" value="Instant">Instant
+                                                </label>
+                                            </div>
+                                        </div>
+                                </div>
+                       
+                                      <!--Date, Time, TimeZone
+                                          - uses the flatpickr plugin-->
+                                          
+                                    <!--Date and Time-->      
+                                       <div class="row dateTimeSection" id="dateTimeSection">
+                                        <div class="col-lg-6 col-xl-5">
+                                         <h6 class="mt-2 mb-1">Date and Time</h6>
+                                        <div class="form-group">
+                                             <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i>
+                                                </span>
+                                                <input type="text" id="zoomDateTime" name="Zoom Date and Time" class="form-control" placeholder="Date and time">
+                                             </div>
+                                        </div>
+                                        </div>
+                                        <!--Time Zone-->
+                                        <div class="col-lg-6 col-xl-5">
+                                         <h6 class="mt-2 mb-1">Timezone</h6>
                                         <div class="form-group">
                                             <select class="form-control" id="timezoneList">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
+                                                <option>Eastern</option>
+                                                <option>Central</option>
+                                                <option>Mountain</option>
+                                                <option>Pacific</option>
                                                 <option>5</option>
                                                 <option>6</option>
                                                 <option>7</option>
@@ -43,138 +93,201 @@
                                                 <option>12</option>
                                             </select>
                                         </div>
+                                        </div>
+                              
+                                    </div>
+                                    
+                                    <!--Duration-->
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                                <h6 class="mt-2 mb-1">Duration</h6>
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-secondary"> Min</button>
+                                                    </span>
+                                                 <select class="form-control" id="timeList">
+                                                    <option>0</option>
+                                                    <option>15</option>
+                                                    <option>30</option>
+                                                    <option>45</option>
+                                                    <option>60</option>
+                                                    <option>75</option>
+                                                </select>
+                                               </div>
                                     </div>
                                 </div>
-                                <!--Date/Time -- Use the flatpickr with the id #zoomDateTime -- see the input element in this div
-                                    - flatpickr code: Allows user to select for date and time
-                                       
-                                           <script>
-                                                $(function() {
-                                                     $("#zoomDateTime").flatpickr({
-                                                         altInput: true,
-                                                         enableTime: true
-                                                     });
-                                                });
-                                            </script>
-                                 
-                                    -->
+                                <!--Advanced Options-->
                                 <div class="row">
-                                    <div class="col-sm-5">
-                                         <h6 class="mt-2 mb-1">Date and Time</h6>
-                                         <div class="form-group">
-                                             <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i>
-                                                </span>
-                                                <input type="text" id="zoomDateTime" name="Zoom Date and Time" class="form-control" placeholder="Pick a date and time to start the meeting">
+                                   <div class="col-md-12">
+                                       <h6 class="mt-3 mb-2">Advanced Options</h6>
+                                   </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                  <label class="checkbox display-inline ml-2">
+                                                    <input type="checkbox" class="" checked="">
+                                                 </label>
+                                                 <p class="display-inline ml-h">Enable join before host<p>
                                              </div>
-                                         </div>
+                                             <div class="row">
+                                                  <label class="checkbox display-inline ml-2">
+                                                    <input type="checkbox" class="" unchecked="false">
+                                                 </label>
+                                                 <p class="display-inline ml-h">Use Personal Meeting ID<p>
+                                             </div>
+                                             <div class="row">
+                                                  <label class="checkbox display-inline ml-2">
+                                                    <input type="checkbox" class="" unchecked="false">
+                                                 </label>
+                                                 <p class="display-inline ml-h">Host in China<p>
+                                             </div>
+                                             <div class="row">
+                                                  <label class="checkbox display-inline ml-2">
+                                                    <input type="checkbox" class="" unchecked="false">
+                                                 </label>
+                                                 <p class="display-inline ml-h">Host in India<p>
+                                             </div>
+
+                                        </div>
+                                </div>
+                                </div>
+                                    </div>
+                                </div> 
+                             <!--Start of right side small cards -->   
+                                  
+                            <!--Video--> 
+                            <div class="col-md-4">
+                                <div class="card">
+                                   <div class="card-header">
+                                       Video &#40;when joining a meeting&#41;
+                                   </div>
+                                   <div class="card-block">
+                                      <div class="row">
+                                          <label class="checkbox display-inline ml-1">
+                                            <input type="checkbox" class="" unchecked="">
+                                         </label>
+                                         <p class="display-inline ml-h">Host<p>
+                                      </div>
+                                      <div class="row">
+                                          <label class="checkbox display-inline ml-1">
+                                            <input type="checkbox" class="" unchecked="">
+                                         </label>
+                                         <p class="display-inline ml-h">Participants<p>
+                                      </div>
                                     </div>
                                 </div>
                                 
-                                <!-- Selecting Contacts -- Plug in appropriate Contact Tables -->
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h6 class="mt-2 mb-1">Add Contacts</h6>
-                                            <div class="card">
-                                                <div>
-                                                    <div class="ml-1 my-1">
-                                                        <p>Select All<p>
-                                                          <label class="switch switch-icon switch-pill switch-primary">
-                                                                <input type="checkbox" class="switch-input" checked="">
-                                                                <span class="switch-label" data-on="" data-off=""></span>
-                                                                <span class="switch-handle"></span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            <div class="card-block">
-                                                <table class="table table-striped table-bordered datatable">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Select</th>
-                                                            <th>Name</th>
-                                                            <th>Email</th>
-                                                            <th>Phone Number</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td> 
-                                                                <label class="switch switch-icon switch-pill switch-primary">
-                                                                    <input type="checkbox" class="switch-input" checked="">
-                                                                    <span class="switch-label" data-on="" data-off=""></span>
-                                                                    <span class="switch-handle"></span>
-                                                                </label>
-                                                            </td>
-                                                            <td>Ned Ninja</td>
-                                                            <td>ned@email.com</td>
-                                                            <td>111-555-5555</td>
-                                                        </tr>
-                                                        <tr>
-                                                             <td> 
-                                                                <label class="switch switch-icon switch-pill switch-primary">
-                                                                    <input type="checkbox" class="switch-input" checked="">
-                                                                    <span class="switch-label" data-on="" data-off=""></span>
-                                                                    <span class="switch-handle"></span>
-                                                                </label>
-                                                            </td>
-                                                            <td>Amy Allston</td>
-                                                            <td>amy@email.com</td>
-                                                            <td>000-456-7890</td>
-
-                                                        </tr>
-                                                        <tr>
-                                                             <td> 
-                                                                <label class="switch switch-icon switch-pill switch-primary">
-                                                                    <input type="checkbox" class="switch-input" checked="">
-                                                                    <span class="switch-label" data-on="" data-off=""></span>
-                                                                    <span class="switch-handle"></span>
-                                                                </label>
-                                                            </td>
-                                                            <td>Clark Canton</td>
-                                                            <td>clark@email.com</td>
-                                                            <td>987-654-3210</td>
-
-
-                                                        </tr>
-                                                        <tr>
-                                                             <td> 
-                                                                <label class="switch switch-icon switch-pill switch-primary">
-                                                                    <input type="checkbox" class="switch-input" checked="">
-                                                                    <span class="switch-label" data-on="" data-off=""></span>
-                                                                    <span class="switch-handle"></span>
-                                                                </label>
-                                                            </td>
-                                                            <td>Juan Juarez</td>
-                                                            <td>juan@email.com</td>
-                                                            <td>123-456-789</td>
-
-                                                        </tr>
-                                                        <tr>
-                                                             <td> 
-                                                                <label class="switch switch-icon switch-pill switch-primary">
-                                                                    <input type="checkbox" class="switch-input" checked="">
-                                                                    <span class="switch-label" data-on="" data-off=""></span>
-                                                                    <span class="switch-handle"></span>
-                                                                </label>
-                                                            </td>
-                                                            <td>Sandra Sampson</td>
-                                                            <td>sandra@email.com</td>
-                                                            <td>001-222-3334</td>
-
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>  
-                                        </div> <!--End Contacts Card-->
-                                        
-                                        <!--Create Meeting Button-->
-                                        <button id="createZoomBtn" class="btn btn-lg btn-warning my-1">Create Meeting</button>
+                                <!--Audio Options-->
+                                <div class="card">
+                                   <div class="card-header">
+                                       Audio Options
+                                   </div>
+                                    <div class="card-block">
+                                            <div class="form-group">
+                                                <label class="radio-inline mr-h" for="inline-radio1">
+                                                    <input type="radio" class="mr-q" id="inline-radio1" name="inline-radios" value="option1">Telephone Only
+                                                </label>
+                                                <label class="radio-inline mr-h" for="inline-radio2">
+                                                    <input type="radio" class="mr-q" id="inline-radio2" name="inline-radios" value="option2">VoIP Only
+                                                </label>
+                                                <label class="radio-inline" for="inline-radio3">
+                                                    <input type="radio" class="mr-q" id="inline-radio3" name="inline-radios" checked="checked" value="option3">Both
+                                                </label>
+                                           
+                                            </div>
+                                           <div class="row">
+                                          <label class="checkbox display-inline ml-1">
+                                            <input type="checkbox" class="" unchecked="">
+                                         </label>
+                                         <p class="display-inline ml-h">Mute participants upon entry<p>
+                                      </div>
                                     </div>
                                 </div>
+                                
+                                <!--Password-->
+                                <div class="card">
+                                   <div class="card-header">
+                                       Password
+                                   </div>
+                                   <div class="card-block">
+                                        <div class="row">
+                                              <label class="checkbox display-inline ml-1">
+                                                <input type="checkbox" class="meetingPwCheckbox" id="meetingPwCheckbox" unchecked="">
+                                             </label>
+                                             <p class="display-inline ml-h">Require Password<p>
+                                        </div>
+                                        <div class="row meetingPwSection" style="display: none;" id="meetingPwSection">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                     <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-lock"></i>
+                                                        </span>
+                                                        <input type="text" id="meetingPw" name="Meeting Password" class="form-control" placeholder="Password">
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                     </div>
+                                    </div>
+                                                 <div class="card">
+                                   <div class="card-header">
+                                       Recording Options
+                                   </div>
+                                   <div class="card-block">
+                                        <div class="row">
+                                              <label class="checkbox display-inline ml-1">
+                                                <input type="checkbox" class="recordingCheckbox" id="recordingCheckbox" unchecked="">
+                                             </label>
+                                             <p class="display-inline ml-h">Record meeting automatically<p>
+                                        </div>
+                                        <div class="row recordingOptions" style="display: none;" id="recordingOptions">
+                                            <div class="col-md-12">
+                                                   <div class="form-group">
+                                                <label class="radio-inline mr-h" for="inline-radio1">
+                                                    <input type="radio" class="mr-q" id="localComputer" name="recordingOptions" value="On local Computer">On local computer
+                                                </label>
+                                                <label class="radio-inline mr-h" for="inline-radio2">
+                                                    <input type="radio" class="mr-q" id="inCloud" name="recordingOptions" value="In the Cloud">In the cloud
+                                                </label>
+                                          
+                                           
+                                            </div>
+                                            </div>
+                                        </div>
+                            
+                                     </div>
+                                    </div>
+                                
                             </div>
                         </div>
-                </div>
+                        </div>
+                
             <!-- /.conainer-fluid -->
-        </div>
-    </div>
-</div>
+            </div>
+            </div>
+            </div>
+
+<!--jQuery Scripts for Toggling Scheduled/Instant Meeting Dat options, Password, and Recording Options-->
+   
+     <script>
+     $(".meetingPwCheckbox").on("click", function(){
+         $(".meetingPwSection").slideToggle();
+     } )
+    </script>
+        <script>
+     $(".recordingCheckbox").on("click", function(){
+         $(".recordingOptions").slideToggle();
+     } )
+    </script>
+    <script>
+     $(".instantMeetingCheckbox").on("click", function(){
+         $(".dateTimeSection").slideToggle();
+     } )
+    </script>
+    <script>
+     $(".scheduledMeetingCheckbox").on("click", function(){
+         $(".dateTimeSection").slideDown();
+     } )
+    </script>
